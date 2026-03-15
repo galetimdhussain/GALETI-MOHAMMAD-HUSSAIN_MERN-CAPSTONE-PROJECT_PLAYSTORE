@@ -1,0 +1,17 @@
+node_modules/
+.env
+.env.*
+dist/
+build/
+coverage/
+playwright-report/
+test-results/
+backend/uploads/
+frontend/.vite/
+frontend/dist/
+README_EXECUTION.md
+README_GITHUB.md
+README_HANDOFF_CODEX.md
+README_JWT.md
+README_MONGODB.md
+README_POSTMAN.md

@@ -1,0 +1,32 @@
+{
+  "name": "backend",
+  "version": "1.0.0",
+  "private": true,
+  "main": "server.js",
+  "type": "commonjs",
+  "scripts": {
+    "dev": "nodemon server.js",
+    "start": "node server.js",
+    "seed": "node ../database/seed.js",
+    "test": "jest --runInBand",
+    "test:api": "jest --runInBand"
+  },
+  "dependencies": {
+    "bcryptjs": "^2.4.3",
+    "cors": "^2.8.5",
+    "dotenv": "^16.6.1",
+    "express": "^4.21.2",
+    "express-mongo-sanitize": "^2.2.0",
+    "helmet": "^8.1.0",
+    "joi": "^17.13.3",
+    "jsonwebtoken": "^9.0.2",
+    "mongoose": "^8.18.1",
+    "morgan": "^1.10.1"
+  },
+  "devDependencies": {
+    "jest": "^30.2.0",
+    "mongodb-memory-server": "^10.3.0",
+    "nodemon": "^3.1.10",
+    "supertest": "^7.1.4"
+  }
+}

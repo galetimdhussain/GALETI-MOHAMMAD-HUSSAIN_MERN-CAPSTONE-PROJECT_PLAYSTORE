@@ -1,0 +1,23 @@
+{
+  "name": "playstore-mern",
+  "version": "1.0.0",
+  "private": true,
+  "description": "Production-quality MERN Play Store capstone project",
+  "workspaces": [
+    "backend",
+    "frontend"
+  ],
+  "scripts": {
+    "install:all": "npm install --workspaces",
+    "dev": "concurrently \"npm run dev --workspace backend\" \"npm run start --workspace frontend\"",
+    "start": "npm run start --workspace backend",
+    "seed": "npm run seed --workspace backend",
+    "test": "npm run test --workspace backend && npm run test --workspace frontend",
+    "test:api": "npm run test:api --workspace backend",
+    "test:component": "npm run test --workspace frontend",
+    "test:e2e": "npm run test:e2e --workspace frontend"
+  },
+  "devDependencies": {
+    "concurrently": "^9.2.1"
+  }
+}
