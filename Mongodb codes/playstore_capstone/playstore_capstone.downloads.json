@@ -1,0 +1,357 @@
+[{
+  "_id": {
+    "$oid": "69b80c6787e7a5fd784c0b50"
+  },
+  "userId": {
+    "$oid": "69b80c6587e7a5fd784c0b06"
+  },
+  "appId": {
+    "$oid": "69b80c6787e7a5fd784c0b0d"
+  },
+  "downloadDate": {
+    "$date": "2026-03-16T13:57:59.563Z"
+  },
+  "createdAt": {
+    "$date": "2026-03-16T13:57:59.574Z"
+  },
+  "updatedAt": {
+    "$date": "2026-03-16T13:57:59.574Z"
+  },
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "69b80c6787e7a5fd784c0b51"
+  },
+  "userId": {
+    "$oid": "69b80c6587e7a5fd784c0b05"
+  },
+  "appId": {
+    "$oid": "69b80c6787e7a5fd784c0b0e"
+  },
+  "downloadDate": {
+    "$date": "2026-03-16T13:57:59.564Z"
+  },
+  "createdAt": {
+    "$date": "2026-03-16T13:57:59.574Z"
+  },
+  "updatedAt": {
+    "$date": "2026-03-16T13:57:59.574Z"
+  },
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "69b80c6787e7a5fd784c0b4f"
+  },
+  "userId": {
+    "$oid": "69b80c6587e7a5fd784c0b05"
+  },
+  "appId": {
+    "$oid": "69b80c6787e7a5fd784c0b0d"
+  },
+  "downloadDate": {
+    "$date": "2026-03-16T13:57:59.562Z"
+  },
+  "createdAt": {
+    "$date": "2026-03-16T13:57:59.573Z"
+  },
+  "updatedAt": {
+    "$date": "2026-03-16T13:57:59.573Z"
+  },
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "69b80c6787e7a5fd784c0b53"
+  },
+  "userId": {
+    "$oid": "69b80c6587e7a5fd784c0b06"
+  },
+  "appId": {
+    "$oid": "69b80c6787e7a5fd784c0b0f"
+  },
+  "downloadDate": {
+    "$date": "2026-03-16T13:57:59.565Z"
+  },
+  "createdAt": {
+    "$date": "2026-03-16T13:57:59.574Z"
+  },
+  "updatedAt": {
+    "$date": "2026-03-16T13:57:59.574Z"
+  },
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "69b80c6787e7a5fd784c0b55"
+  },
+  "userId": {
+    "$oid": "69b80c6587e7a5fd784c0b05"
+  },
+  "appId": {
+    "$oid": "69b80c6787e7a5fd784c0b11"
+  },
+  "downloadDate": {
+    "$date": "2026-03-16T13:57:59.565Z"
+  },
+  "createdAt": {
+    "$date": "2026-03-16T13:57:59.574Z"
+  },
+  "updatedAt": {
+    "$date": "2026-03-16T13:57:59.574Z"
+  },
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "69b80c6787e7a5fd784c0b56"
+  },
+  "userId": {
+    "$oid": "69b80c6587e7a5fd784c0b06"
+  },
+  "appId": {
+    "$oid": "69b80c6787e7a5fd784c0b11"
+  },
+  "downloadDate": {
+    "$date": "2026-03-16T13:57:59.566Z"
+  },
+  "createdAt": {
+    "$date": "2026-03-16T13:57:59.574Z"
+  },
+  "updatedAt": {
+    "$date": "2026-03-16T13:57:59.574Z"
+  },
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "69b80c6787e7a5fd784c0b58"
+  },
+  "userId": {
+    "$oid": "69b80c6587e7a5fd784c0b06"
+  },
+  "appId": {
+    "$oid": "69b80c6787e7a5fd784c0b13"
+  },
+  "downloadDate": {
+    "$date": "2026-03-16T13:57:59.566Z"
+  },
+  "createdAt": {
+    "$date": "2026-03-16T13:57:59.574Z"
+  },
+  "updatedAt": {
+    "$date": "2026-03-16T13:57:59.574Z"
+  },
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "69b80c6787e7a5fd784c0b5c"
+  },
+  "userId": {
+    "$oid": "69b80c6587e7a5fd784c0b05"
+  },
+  "appId": {
+    "$oid": "69b80c6787e7a5fd784c0b17"
+  },
+  "downloadDate": {
+    "$date": "2026-03-16T13:57:59.568Z"
+  },
+  "createdAt": {
+    "$date": "2026-03-16T13:57:59.574Z"
+  },
+  "updatedAt": {
+    "$date": "2026-03-16T13:57:59.574Z"
+  },
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "69b80c6787e7a5fd784c0b5d"
+  },
+  "userId": {
+    "$oid": "69b80c6587e7a5fd784c0b06"
+  },
+  "appId": {
+    "$oid": "69b80c6787e7a5fd784c0b18"
+  },
+  "downloadDate": {
+    "$date": "2026-03-16T13:57:59.568Z"
+  },
+  "createdAt": {
+    "$date": "2026-03-16T13:57:59.574Z"
+  },
+  "updatedAt": {
+    "$date": "2026-03-16T13:57:59.574Z"
+  },
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "69b80c6787e7a5fd784c0b5f"
+  },
+  "userId": {
+    "$oid": "69b80c6587e7a5fd784c0b05"
+  },
+  "appId": {
+    "$oid": "69b80c6787e7a5fd784c0b1a"
+  },
+  "downloadDate": {
+    "$date": "2026-03-16T13:57:59.569Z"
+  },
+  "createdAt": {
+    "$date": "2026-03-16T13:57:59.575Z"
+  },
+  "updatedAt": {
+    "$date": "2026-03-16T13:57:59.575Z"
+  },
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "69b80c6787e7a5fd784c0b61"
+  },
+  "userId": {
+    "$oid": "69b80c6587e7a5fd784c0b06"
+  },
+  "appId": {
+    "$oid": "69b80c6787e7a5fd784c0b0e"
+  },
+  "downloadDate": {
+    "$date": "2026-03-16T13:57:59.569Z"
+  },
+  "createdAt": {
+    "$date": "2026-03-16T13:57:59.575Z"
+  },
+  "updatedAt": {
+    "$date": "2026-03-16T13:57:59.575Z"
+  },
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "69b80c6787e7a5fd784c0b59"
+  },
+  "userId": {
+    "$oid": "69b80c6587e7a5fd784c0b05"
+  },
+  "appId": {
+    "$oid": "69b80c6787e7a5fd784c0b14"
+  },
+  "downloadDate": {
+    "$date": "2026-03-16T13:57:59.567Z"
+  },
+  "createdAt": {
+    "$date": "2026-03-16T13:57:59.574Z"
+  },
+  "updatedAt": {
+    "$date": "2026-03-16T13:57:59.574Z"
+  },
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "69b80c6787e7a5fd784c0b5a"
+  },
+  "userId": {
+    "$oid": "69b80c6587e7a5fd784c0b06"
+  },
+  "appId": {
+    "$oid": "69b80c6787e7a5fd784c0b15"
+  },
+  "downloadDate": {
+    "$date": "2026-03-16T13:57:59.567Z"
+  },
+  "createdAt": {
+    "$date": "2026-03-16T13:57:59.574Z"
+  },
+  "updatedAt": {
+    "$date": "2026-03-16T13:57:59.574Z"
+  },
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "69b810377a4ef916f4cc4494"
+  },
+  "userId": {
+    "$oid": "69b810087a4ef916f4cc441e"
+  },
+  "appId": {
+    "$oid": "69b80c6787e7a5fd784c0b11"
+  },
+  "downloadDate": {
+    "$date": "2026-03-16T14:14:15.318Z"
+  },
+  "createdAt": {
+    "$date": "2026-03-16T14:14:15.321Z"
+  },
+  "updatedAt": {
+    "$date": "2026-03-16T14:14:15.321Z"
+  },
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "69b810647a4ef916f4cc44cc"
+  },
+  "userId": {
+    "$oid": "69b810087a4ef916f4cc441e"
+  },
+  "appId": {
+    "$oid": "69b80c6787e7a5fd784c0b0e"
+  },
+  "downloadDate": {
+    "$date": "2026-03-16T14:15:00.514Z"
+  },
+  "createdAt": {
+    "$date": "2026-03-16T14:15:00.515Z"
+  },
+  "updatedAt": {
+    "$date": "2026-03-16T14:15:00.515Z"
+  },
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "69b85c305f80b81363580441"
+  },
+  "userId": {
+    "$oid": "69b810087a4ef916f4cc441e"
+  },
+  "appId": {
+    "$oid": "69b80c6787e7a5fd784c0b1a"
+  },
+  "downloadDate": {
+    "$date": "2026-03-16T19:38:24.394Z"
+  },
+  "createdAt": {
+    "$date": "2026-03-16T19:38:24.412Z"
+  },
+  "updatedAt": {
+    "$date": "2026-03-16T19:38:24.412Z"
+  },
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "69b85dfb5f80b81363580572"
+  },
+  "userId": {
+    "$oid": "69b85cb35f80b81363580474"
+  },
+  "appId": {
+    "$oid": "69b85db95f80b8136358051d"
+  },
+  "downloadDate": {
+    "$date": "2026-03-16T19:46:03.298Z"
+  },
+  "createdAt": {
+    "$date": "2026-03-16T19:46:03.304Z"
+  },
+  "updatedAt": {
+    "$date": "2026-03-16T19:46:03.304Z"
+  },
+  "__v": 0
+}]

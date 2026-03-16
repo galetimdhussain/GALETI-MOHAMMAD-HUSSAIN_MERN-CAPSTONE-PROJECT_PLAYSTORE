@@ -18,7 +18,7 @@ Install these tools before starting:
 Run installation once from the project root because this repository uses npm workspaces.
 
 ```powershell
-npm install
+npm install  (run this from root folder of project)
 ```
 
 ## 3. Environment Files

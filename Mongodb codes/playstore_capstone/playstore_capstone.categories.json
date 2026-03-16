@@ -1,0 +1,112 @@
+[{
+  "_id": {
+    "$oid": "69b3f27f98a733d22148e2fc"
+  },
+  "name": "Games",
+  "slug": "games",
+  "description": "Interactive and entertainment applications for gamers.",
+  "isActive": true,
+  "__v": 0,
+  "createdAt": {
+    "$date": "2026-03-13T11:18:23.616Z"
+  },
+  "updatedAt": {
+    "$date": "2026-03-16T20:03:35.716Z"
+  }
+},
+{
+  "_id": {
+    "$oid": "69b3f27f98a733d22148e2fd"
+  },
+  "name": "Beauty",
+  "slug": "beauty",
+  "description": "Beauty, makeup, and self-care related applications.",
+  "isActive": true,
+  "__v": 0,
+  "createdAt": {
+    "$date": "2026-03-13T11:18:23.619Z"
+  },
+  "updatedAt": {
+    "$date": "2026-03-16T20:03:35.723Z"
+  }
+},
+{
+  "_id": {
+    "$oid": "69b3f27f98a733d22148e2fe"
+  },
+  "name": "Fashion",
+  "slug": "fashion",
+  "description": "Style, trends, shopping, and fashion discovery apps.",
+  "isActive": true,
+  "__v": 0,
+  "createdAt": {
+    "$date": "2026-03-13T11:18:23.620Z"
+  },
+  "updatedAt": {
+    "$date": "2026-03-16T20:03:35.736Z"
+  }
+},
+{
+  "_id": {
+    "$oid": "69b3f27f98a733d22148e2ff"
+  },
+  "name": "Women",
+  "slug": "women",
+  "description": "Applications focused on women-centric services and content.",
+  "isActive": true,
+  "__v": 0,
+  "createdAt": {
+    "$date": "2026-03-13T11:18:23.620Z"
+  },
+  "updatedAt": {
+    "$date": "2026-03-16T20:03:35.740Z"
+  }
+},
+{
+  "_id": {
+    "$oid": "69b3f27f98a733d22148e300"
+  },
+  "name": "Health",
+  "slug": "health",
+  "description": "Fitness, wellness, and healthcare applications.",
+  "isActive": true,
+  "__v": 0,
+  "createdAt": {
+    "$date": "2026-03-13T11:18:23.620Z"
+  },
+  "updatedAt": {
+    "$date": "2026-03-16T20:03:35.776Z"
+  }
+},
+{
+  "_id": {
+    "$oid": "69b5462ed2680b590dde6860"
+  },
+  "slug": "social",
+  "__v": 0,
+  "createdAt": {
+    "$date": "2026-03-14T11:27:42.622Z"
+  },
+  "description": "Messaging, communities, and social networking applications.",
+  "isActive": true,
+  "name": "Social",
+  "updatedAt": {
+    "$date": "2026-03-16T20:03:35.804Z"
+  }
+},
+{
+  "_id": {
+    "$oid": "69b5462ed2680b590dde6861"
+  },
+  "slug": "technology",
+  "__v": 0,
+  "createdAt": {
+    "$date": "2026-03-14T11:27:42.702Z"
+  },
+  "description": "Developer tools, productivity, and modern technology platforms.",
+  "isActive": true,
+  "name": "Technology",
+  "updatedAt": {
+    "$date": "2026-03-16T20:03:35.867Z"
+  }
+}]

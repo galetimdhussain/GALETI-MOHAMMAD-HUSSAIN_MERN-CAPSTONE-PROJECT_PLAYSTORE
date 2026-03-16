@@ -212,47 +212,7 @@ The application currently supports only two roles:
 - express-mongo-sanitize
 - Jest and Supertest
 
-## Current Project Structure
 
-```text
-PlayStore-MERN/
-  backend/
-    config/
-    controllers/
-    middlewares/
-    models/
-    routes/
-    services/
-    tests/
-    utils/
-    validators/
-    app.js
-    server.js
-  frontend/
-    public/
-    src/
-      components/
-      contexts/
-      hooks/
-      pages/
-      routes/
-      services/
-      styles/
-      utils/
-      App.js
-      index.js
-      setupTests.js
-    tests/
-  database/
-    seed.js
-  docs/
-    architecture.md
-    api-docs.md
-    requirement-checklist.md
-  README.md
-  README_EXECUTION.md
- 
-```
 
 ## Current Frontend Pages
 

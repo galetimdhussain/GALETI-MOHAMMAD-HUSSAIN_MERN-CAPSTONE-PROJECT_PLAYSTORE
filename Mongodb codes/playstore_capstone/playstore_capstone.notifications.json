@@ -1,0 +1,339 @@
+[{
+  "_id": {
+    "$oid": "69b80c6787e7a5fd784c0b8b"
+  },
+  "recipientId": {
+    "$oid": "69b80c6587e7a5fd784c0b04"
+  },
+  "recipientRole": "owner",
+  "type": "app_downloaded",
+  "title": "New app download",
+  "message": "Asha Sharma downloaded WhatsApp.",
+  "relatedAppId": {
+    "$oid": "69b80c6787e7a5fd784c0b0d"
+  },
+  "isRead": false,
+  "createdAt": {
+    "$date": "2026-03-16T13:57:59.794Z"
+  },
+  "updatedAt": {
+    "$date": "2026-03-16T13:57:59.794Z"
+  },
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "69b80c6787e7a5fd784c0b8d"
+  },
+  "recipientId": {
+    "$oid": "69b80c6587e7a5fd784c0b04"
+  },
+  "recipientRole": "owner",
+  "type": "app_downloaded",
+  "title": "New app download",
+  "message": "Neha Verma downloaded Instagram.",
+  "relatedAppId": {
+    "$oid": "69b80c6787e7a5fd784c0b0e"
+  },
+  "isRead": false,
+  "createdAt": {
+    "$date": "2026-03-16T13:57:59.795Z"
+  },
+  "updatedAt": {
+    "$date": "2026-03-16T13:57:59.795Z"
+  },
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "69b80c6787e7a5fd784c0b8c"
+  },
+  "recipientId": {
+    "$oid": "69b80c6587e7a5fd784c0b04"
+  },
+  "recipientRole": "owner",
+  "type": "app_downloaded",
+  "title": "New app download",
+  "message": "Kiran Patel downloaded PUBG Mobile.",
+  "relatedAppId": {
+    "$oid": "69b80c6787e7a5fd784c0b11"
+  },
+  "isRead": false,
+  "createdAt": {
+    "$date": "2026-03-16T13:57:59.794Z"
+  },
+  "updatedAt": {
+    "$date": "2026-03-16T13:57:59.794Z"
+  },
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "69b80c6787e7a5fd784c0b8e"
+  },
+  "recipientId": {
+    "$oid": "69b80c6587e7a5fd784c0b05"
+  },
+  "recipientRole": "user",
+  "type": "app_updated",
+  "title": "WhatsApp has a new update",
+  "message": "GALETI MOHAMMAD HUSSAIN published improved call stability and media sync for WhatsApp.",
+  "relatedAppId": {
+    "$oid": "69b80c6787e7a5fd784c0b0d"
+  },
+  "isRead": false,
+  "createdAt": {
+    "$date": "2026-03-16T13:57:59.795Z"
+  },
+  "updatedAt": {
+    "$date": "2026-03-16T13:57:59.795Z"
+  },
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "69b80c6787e7a5fd784c0b8f"
+  },
+  "recipientId": {
+    "$oid": "69b80c6587e7a5fd784c0b06"
+  },
+  "recipientRole": "user",
+  "type": "app_updated",
+  "title": "PUBG Mobile has a new update",
+  "message": "GALETI MOHAMMAD HUSSAIN released a fresh arena mode and smoother matchmaking update.",
+  "relatedAppId": {
+    "$oid": "69b80c6787e7a5fd784c0b11"
+  },
+  "isRead": false,
+  "createdAt": {
+    "$date": "2026-03-16T13:57:59.795Z"
+  },
+  "updatedAt": {
+    "$date": "2026-03-16T13:57:59.795Z"
+  },
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "69b810377a4ef916f4cc4496"
+  },
+  "recipientId": {
+    "$oid": "69b80c6587e7a5fd784c0b04"
+  },
+  "recipientRole": "owner",
+  "type": "app_downloaded",
+  "title": "New app download",
+  "message": "sudheer hussain downloaded PUBG Mobile.",
+  "relatedAppId": {
+    "$oid": "69b80c6787e7a5fd784c0b11"
+  },
+  "isRead": false,
+  "metadata": {
+    "downloadedBy": {
+      "$oid": "69b810087a4ef916f4cc441e"
+    },
+    "downloadedByName": "sudheer hussain",
+    "downloadedByEmail": "sudheer@gmail.com"
+  },
+  "createdAt": {
+    "$date": "2026-03-16T14:14:15.430Z"
+  },
+  "updatedAt": {
+    "$date": "2026-03-16T14:14:15.430Z"
+  },
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "69b810647a4ef916f4cc44ce"
+  },
+  "recipientId": {
+    "$oid": "69b80c6587e7a5fd784c0b04"
+  },
+  "recipientRole": "owner",
+  "type": "app_downloaded",
+  "title": "New app download",
+  "message": "sudheer hussain downloaded Instagram.",
+  "relatedAppId": {
+    "$oid": "69b80c6787e7a5fd784c0b0e"
+  },
+  "isRead": false,
+  "metadata": {
+    "downloadedBy": {
+      "$oid": "69b810087a4ef916f4cc441e"
+    },
+    "downloadedByName": "sudheer hussain",
+    "downloadedByEmail": "sudheer@gmail.com"
+  },
+  "createdAt": {
+    "$date": "2026-03-16T14:15:00.531Z"
+  },
+  "updatedAt": {
+    "$date": "2026-03-16T14:15:00.531Z"
+  },
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "69b8112e7a4ef916f4cc453f"
+  },
+  "recipientId": {
+    "$oid": "69b80c6587e7a5fd784c0b05"
+  },
+  "recipientRole": "user",
+  "type": "app_updated",
+  "title": "Instagram has a new update",
+  "message": "GALETI MOHAMMAD HUSSAIN published version 14.8.5.0. bugs fixed....",
+  "relatedAppId": {
+    "$oid": "69b80c6787e7a5fd784c0b0e"
+  },
+  "isRead": false,
+  "metadata": {
+    "version": "14.8.5.0"
+  },
+  "__v": 0,
+  "createdAt": {
+    "$date": "2026-03-16T14:18:22.485Z"
+  },
+  "updatedAt": {
+    "$date": "2026-03-16T14:18:22.485Z"
+  }
+},
+{
+  "_id": {
+    "$oid": "69b8112e7a4ef916f4cc4540"
+  },
+  "recipientId": {
+    "$oid": "69b80c6587e7a5fd784c0b06"
+  },
+  "recipientRole": "user",
+  "type": "app_updated",
+  "title": "Instagram has a new update",
+  "message": "GALETI MOHAMMAD HUSSAIN published version 14.8.5.0. bugs fixed....",
+  "relatedAppId": {
+    "$oid": "69b80c6787e7a5fd784c0b0e"
+  },
+  "isRead": false,
+  "metadata": {
+    "version": "14.8.5.0"
+  },
+  "__v": 0,
+  "createdAt": {
+    "$date": "2026-03-16T14:18:22.496Z"
+  },
+  "updatedAt": {
+    "$date": "2026-03-16T14:18:22.496Z"
+  }
+},
+{
+  "_id": {
+    "$oid": "69b8112e7a4ef916f4cc4542"
+  },
+  "recipientId": {
+    "$oid": "69b810087a4ef916f4cc441e"
+  },
+  "recipientRole": "user",
+  "type": "app_updated",
+  "title": "Instagram has a new update",
+  "message": "GALETI MOHAMMAD HUSSAIN published version 14.8.5.0. bugs fixed....",
+  "relatedAppId": {
+    "$oid": "69b80c6787e7a5fd784c0b0e"
+  },
+  "isRead": false,
+  "metadata": {
+    "version": "14.8.5.0"
+  },
+  "__v": 0,
+  "createdAt": {
+    "$date": "2026-03-16T14:18:22.501Z"
+  },
+  "updatedAt": {
+    "$date": "2026-03-16T14:18:22.501Z"
+  }
+},
+{
+  "_id": {
+    "$oid": "69b85c305f80b81363580443"
+  },
+  "recipientId": {
+    "$oid": "69b80c6587e7a5fd784c0b04"
+  },
+  "recipientRole": "owner",
+  "type": "app_downloaded",
+  "title": "New app download",
+  "message": "sudheer hussain downloaded LinkedIn.",
+  "relatedAppId": {
+    "$oid": "69b80c6787e7a5fd784c0b1a"
+  },
+  "isRead": false,
+  "metadata": {
+    "downloadedBy": {
+      "$oid": "69b810087a4ef916f4cc441e"
+    },
+    "downloadedByName": "sudheer hussain",
+    "downloadedByEmail": "sudheer@gmail.com"
+  },
+  "createdAt": {
+    "$date": "2026-03-16T19:38:24.450Z"
+  },
+  "updatedAt": {
+    "$date": "2026-03-16T19:38:24.450Z"
+  },
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "69b85dfb5f80b81363580574"
+  },
+  "recipientId": {
+    "$oid": "69b80c6587e7a5fd784c0b04"
+  },
+  "recipientRole": "owner",
+  "type": "app_downloaded",
+  "title": "New app download",
+  "message": "Dummyuser downloaded Super Mario.",
+  "relatedAppId": {
+    "$oid": "69b85db95f80b8136358051d"
+  },
+  "isRead": false,
+  "metadata": {
+    "downloadedBy": {
+      "$oid": "69b85cb35f80b81363580474"
+    },
+    "downloadedByName": "Dummyuser",
+    "downloadedByEmail": "dummy@gmail.com"
+  },
+  "createdAt": {
+    "$date": "2026-03-16T19:46:03.327Z"
+  },
+  "updatedAt": {
+    "$date": "2026-03-16T19:46:03.327Z"
+  },
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "69b85e895f80b813635805eb"
+  },
+  "recipientId": {
+    "$oid": "69b85cb35f80b81363580474"
+  },
+  "recipientRole": "owner",
+  "type": "app_updated",
+  "title": "Super Mario has a new update",
+  "message": "GALETI MOHAMMAD HUSSAIN published version 2.9.8.1. Bugs removed and added new maps..",
+  "relatedAppId": {
+    "$oid": "69b85db95f80b8136358051d"
+  },
+  "isRead": false,
+  "metadata": {
+    "version": "2.9.8.1"
+  },
+  "__v": 0,
+  "createdAt": {
+    "$date": "2026-03-16T19:48:25.362Z"
+  },
+  "updatedAt": {
+    "$date": "2026-03-16T19:48:25.362Z"
+  }
+}]

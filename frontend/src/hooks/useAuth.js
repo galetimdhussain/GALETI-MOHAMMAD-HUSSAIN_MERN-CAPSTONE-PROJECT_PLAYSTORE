@@ -8,7 +8,7 @@ function useAuth() {
     throw new Error('useAuth must be used inside AuthProvider');
   }
 
-  return context;/*modified by HUSSAIN on 2024-06-01: Added error handling for missing context*/
+  return context;/*modified by HUSSAIN on 2024-06-01:at 5am Added error handling for missing context*/
 }
 
 export default useAuth;

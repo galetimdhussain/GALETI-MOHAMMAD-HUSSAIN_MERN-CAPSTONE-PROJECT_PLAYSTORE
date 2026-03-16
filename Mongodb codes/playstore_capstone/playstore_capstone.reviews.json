@@ -1,0 +1,368 @@
+[{
+  "_id": {
+    "$oid": "69b80c6787e7a5fd784c0b2b"
+  },
+  "userId": {
+    "$oid": "69b80c6587e7a5fd784c0b05"
+  },
+  "appId": {
+    "$oid": "69b80c6787e7a5fd784c0b0d"
+  },
+  "rating": 5,
+  "comment": "Fast, reliable, and very easy to use with friends and family.",
+  "timestamp": {
+    "$date": "2026-03-16T13:57:59.480Z"
+  },
+  "createdAt": {
+    "$date": "2026-03-16T13:57:59.489Z"
+  },
+  "updatedAt": {
+    "$date": "2026-03-16T13:57:59.489Z"
+  },
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "69b80c6787e7a5fd784c0b2d"
+  },
+  "userId": {
+    "$oid": "69b80c6587e7a5fd784c0b05"
+  },
+  "appId": {
+    "$oid": "69b80c6787e7a5fd784c0b0e"
+  },
+  "rating": 4,
+  "comment": "Stories and reels are smooth, and the app feels polished.",
+  "timestamp": {
+    "$date": "2026-03-16T13:57:59.481Z"
+  },
+  "createdAt": {
+    "$date": "2026-03-16T13:57:59.489Z"
+  },
+  "updatedAt": {
+    "$date": "2026-03-16T13:57:59.489Z"
+  },
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "69b80c6787e7a5fd784c0b2c"
+  },
+  "userId": {
+    "$oid": "69b80c6587e7a5fd784c0b06"
+  },
+  "appId": {
+    "$oid": "69b80c6787e7a5fd784c0b0d"
+  },
+  "rating": 4,
+  "comment": "Clean interface and stable voice calls across devices.",
+  "timestamp": {
+    "$date": "2026-03-16T13:57:59.481Z"
+  },
+  "createdAt": {
+    "$date": "2026-03-16T13:57:59.489Z"
+  },
+  "updatedAt": {
+    "$date": "2026-03-16T13:57:59.489Z"
+  },
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "69b80c6787e7a5fd784c0b2f"
+  },
+  "userId": {
+    "$oid": "69b80c6587e7a5fd784c0b06"
+  },
+  "appId": {
+    "$oid": "69b80c6787e7a5fd784c0b0f"
+  },
+  "rating": 4,
+  "comment": "Good video calling quality even on slower connections.",
+  "timestamp": {
+    "$date": "2026-03-16T13:57:59.482Z"
+  },
+  "createdAt": {
+    "$date": "2026-03-16T13:57:59.489Z"
+  },
+  "updatedAt": {
+    "$date": "2026-03-16T13:57:59.489Z"
+  },
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "69b80c6787e7a5fd784c0b31"
+  },
+  "userId": {
+    "$oid": "69b80c6587e7a5fd784c0b05"
+  },
+  "appId": {
+    "$oid": "69b80c6787e7a5fd784c0b11"
+  },
+  "rating": 5,
+  "comment": "Great graphics and smooth gameplay in team matches.",
+  "timestamp": {
+    "$date": "2026-03-16T13:57:59.482Z"
+  },
+  "createdAt": {
+    "$date": "2026-03-16T13:57:59.490Z"
+  },
+  "updatedAt": {
+    "$date": "2026-03-16T13:57:59.490Z"
+  },
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "69b80c6787e7a5fd784c0b32"
+  },
+  "userId": {
+    "$oid": "69b80c6587e7a5fd784c0b06"
+  },
+  "appId": {
+    "$oid": "69b80c6787e7a5fd784c0b11"
+  },
+  "rating": 4,
+  "comment": "The seasonal updates keep the experience fresh.",
+  "timestamp": {
+    "$date": "2026-03-16T13:57:59.482Z"
+  },
+  "createdAt": {
+    "$date": "2026-03-16T13:57:59.490Z"
+  },
+  "updatedAt": {
+    "$date": "2026-03-16T13:57:59.490Z"
+  },
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "69b80c6787e7a5fd784c0b35"
+  },
+  "userId": {
+    "$oid": "69b80c6587e7a5fd784c0b05"
+  },
+  "appId": {
+    "$oid": "69b80c6787e7a5fd784c0b14"
+  },
+  "rating": 4,
+  "comment": "Good offers and a polished beauty discovery flow.",
+  "timestamp": {
+    "$date": "2026-03-16T13:57:59.483Z"
+  },
+  "createdAt": {
+    "$date": "2026-03-16T13:57:59.490Z"
+  },
+  "updatedAt": {
+    "$date": "2026-03-16T13:57:59.490Z"
+  },
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "69b80c6787e7a5fd784c0b36"
+  },
+  "userId": {
+    "$oid": "69b80c6587e7a5fd784c0b06"
+  },
+  "appId": {
+    "$oid": "69b80c6787e7a5fd784c0b15"
+  },
+  "rating": 5,
+  "comment": "Good collections and smooth browsing across categories.",
+  "timestamp": {
+    "$date": "2026-03-16T13:57:59.483Z"
+  },
+  "createdAt": {
+    "$date": "2026-03-16T13:57:59.490Z"
+  },
+  "updatedAt": {
+    "$date": "2026-03-16T13:57:59.490Z"
+  },
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "69b80c6787e7a5fd784c0b38"
+  },
+  "userId": {
+    "$oid": "69b80c6587e7a5fd784c0b05"
+  },
+  "appId": {
+    "$oid": "69b80c6787e7a5fd784c0b17"
+  },
+  "rating": 5,
+  "comment": "Helpful reminders and a privacy-friendly design.",
+  "timestamp": {
+    "$date": "2026-03-16T13:57:59.484Z"
+  },
+  "createdAt": {
+    "$date": "2026-03-16T13:57:59.490Z"
+  },
+  "updatedAt": {
+    "$date": "2026-03-16T13:57:59.490Z"
+  },
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "69b80c6787e7a5fd784c0b39"
+  },
+  "userId": {
+    "$oid": "69b80c6587e7a5fd784c0b06"
+  },
+  "appId": {
+    "$oid": "69b80c6787e7a5fd784c0b18"
+  },
+  "rating": 4,
+  "comment": "Useful health insights and a strong daily tracker.",
+  "timestamp": {
+    "$date": "2026-03-16T13:57:59.484Z"
+  },
+  "createdAt": {
+    "$date": "2026-03-16T13:57:59.490Z"
+  },
+  "updatedAt": {
+    "$date": "2026-03-16T13:57:59.490Z"
+  },
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "69b80c6787e7a5fd784c0b3b"
+  },
+  "userId": {
+    "$oid": "69b80c6587e7a5fd784c0b05"
+  },
+  "appId": {
+    "$oid": "69b80c6787e7a5fd784c0b1a"
+  },
+  "rating": 4,
+  "comment": "Professional feed and job tools are well integrated.",
+  "timestamp": {
+    "$date": "2026-03-16T13:57:59.485Z"
+  },
+  "createdAt": {
+    "$date": "2026-03-16T13:57:59.491Z"
+  },
+  "updatedAt": {
+    "$date": "2026-03-16T13:57:59.491Z"
+  },
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "69b80c6787e7a5fd784c0b34"
+  },
+  "userId": {
+    "$oid": "69b80c6587e7a5fd784c0b06"
+  },
+  "appId": {
+    "$oid": "69b80c6787e7a5fd784c0b13"
+  },
+  "rating": 5,
+  "comment": "Classic action feeling with modern mission design.",
+  "timestamp": {
+    "$date": "2026-03-16T13:57:59.483Z"
+  },
+  "createdAt": {
+    "$date": "2026-03-16T13:57:59.490Z"
+  },
+  "updatedAt": {
+    "$date": "2026-03-16T13:57:59.490Z"
+  },
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "69b810547a4ef916f4cc44a6"
+  },
+  "userId": {
+    "$oid": "69b810087a4ef916f4cc441e"
+  },
+  "appId": {
+    "$oid": "69b80c6787e7a5fd784c0b11"
+  },
+  "rating": 4,
+  "comment": "stress reliver.....man awesome game...",
+  "timestamp": {
+    "$date": "2026-03-16T14:14:44.423Z"
+  },
+  "createdAt": {
+    "$date": "2026-03-16T14:14:44.432Z"
+  },
+  "updatedAt": {
+    "$date": "2026-03-16T14:14:44.432Z"
+  },
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "69b810817a4ef916f4cc44de"
+  },
+  "userId": {
+    "$oid": "69b810087a4ef916f4cc441e"
+  },
+  "appId": {
+    "$oid": "69b80c6787e7a5fd784c0b0e"
+  },
+  "rating": 2,
+  "comment": "has somebugs needs to be resolved..",
+  "timestamp": {
+    "$date": "2026-03-16T14:15:29.508Z"
+  },
+  "createdAt": {
+    "$date": "2026-03-16T14:15:29.514Z"
+  },
+  "updatedAt": {
+    "$date": "2026-03-16T14:15:29.514Z"
+  },
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "69b85c605f80b81363580457"
+  },
+  "userId": {
+    "$oid": "69b810087a4ef916f4cc441e"
+  },
+  "appId": {
+    "$oid": "69b80c6787e7a5fd784c0b1a"
+  },
+  "rating": 4,
+  "comment": "It helped me alot to find jobs and land many interview thank you linkedin team....",
+  "timestamp": {
+    "$date": "2026-03-16T19:39:12.892Z"
+  },
+  "createdAt": {
+    "$date": "2026-03-16T19:39:12.897Z"
+  },
+  "updatedAt": {
+    "$date": "2026-03-16T19:39:12.897Z"
+  },
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "69b85e105f80b81363580583"
+  },
+  "userId": {
+    "$oid": "69b85cb35f80b81363580474"
+  },
+  "appId": {
+    "$oid": "69b85db95f80b8136358051d"
+  },
+  "rating": 5,
+  "comment": "good game very enjoying...",
+  "timestamp": {
+    "$date": "2026-03-16T19:46:24.530Z"
+  },
+  "createdAt": {
+    "$date": "2026-03-16T19:46:24.532Z"
+  },
+  "updatedAt": {
+    "$date": "2026-03-16T19:46:24.532Z"
+  },
+  "__v": 0
+}]

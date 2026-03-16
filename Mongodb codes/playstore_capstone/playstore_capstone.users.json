@@ -1,0 +1,140 @@
+[{
+  "_id": {
+    "$oid": "69b80c6587e7a5fd784c0b05"
+  },
+  "name": "Asha Sharma",
+  "email": "user@playstore.dev",
+  "password": "$2a$10$N3jxj3YTgYIZ.QUii6RAbeR4JzceWBb/ChaFDrESOtaVzRWBrPlSe",
+  "role": "user",
+  "subscribedApps": [
+    {
+      "$oid": "69b80c6787e7a5fd784c0b0d"
+    },
+    {
+      "$oid": "69b80c6787e7a5fd784c0b0e"
+    },
+    {
+      "$oid": "69b80c6787e7a5fd784c0b11"
+    },
+    {
+      "$oid": "69b80c6787e7a5fd784c0b14"
+    },
+    {
+      "$oid": "69b80c6787e7a5fd784c0b17"
+    },
+    {
+      "$oid": "69b80c6787e7a5fd784c0b1a"
+    }
+  ],
+  "createdAt": {
+    "$date": "2026-03-16T13:57:57.832Z"
+  },
+  "updatedAt": {
+    "$date": "2026-03-16T13:57:59.633Z"
+  },
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "69b80c6587e7a5fd784c0b04"
+  },
+  "name": "GALETI MOHAMMAD HUSSAIN",
+  "email": "hussaingaleti786@gmail.com",
+  "password": "$2a$10$2juD3iOsWFWmIHic6s21iekO2nidNlTq0TyyDTXb2jKDCBjLy6c7y",
+  "role": "owner",
+  "subscribedApps": [],
+  "createdAt": {
+    "$date": "2026-03-16T13:57:57.831Z"
+  },
+  "updatedAt": {
+    "$date": "2026-03-16T13:57:57.831Z"
+  },
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "69b80c6587e7a5fd784c0b06"
+  },
+  "name": "Kiran Patel",
+  "email": "user2@playstore.dev",
+  "password": "$2a$10$PRb5OBZWyBJqjazsrLQKZOgwzvo4K5R4z/3LxO6LhVc1H2PaZnz9C",
+  "role": "user",
+  "subscribedApps": [
+    {
+      "$oid": "69b80c6787e7a5fd784c0b0d"
+    },
+    {
+      "$oid": "69b80c6787e7a5fd784c0b0f"
+    },
+    {
+      "$oid": "69b80c6787e7a5fd784c0b11"
+    },
+    {
+      "$oid": "69b80c6787e7a5fd784c0b13"
+    },
+    {
+      "$oid": "69b80c6787e7a5fd784c0b15"
+    },
+    {
+      "$oid": "69b80c6787e7a5fd784c0b18"
+    },
+    {
+      "$oid": "69b80c6787e7a5fd784c0b0e"
+    }
+  ],
+  "createdAt": {
+    "$date": "2026-03-16T13:57:57.832Z"
+  },
+  "updatedAt": {
+    "$date": "2026-03-16T13:57:59.634Z"
+  },
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "69b810087a4ef916f4cc441e"
+  },
+  "name": "sudheer hussain",
+  "email": "sudheer@gmail.com",
+  "password": "$2a$10$SIsJdmSJ89EKndbaWQXku.kfcNX8ZjEG1oI7MfmDDaJOJXaA/B5L6",
+  "role": "user",
+  "subscribedApps": [
+    {
+      "$oid": "69b80c6787e7a5fd784c0b11"
+    },
+    {
+      "$oid": "69b80c6787e7a5fd784c0b0e"
+    },
+    {
+      "$oid": "69b80c6787e7a5fd784c0b1a"
+    }
+  ],
+  "createdAt": {
+    "$date": "2026-03-16T14:13:28.855Z"
+  },
+  "updatedAt": {
+    "$date": "2026-03-16T19:39:12.931Z"
+  },
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "69b85cb35f80b81363580474"
+  },
+  "name": "Dummyuser",
+  "email": "dummy@gmail.com",
+  "password": "$2a$10$4.MEmvzZcpkH7DKyD6Spu.cP8cJX42Xl2zp2YfUfmbzrYL5Ve61yy",
+  "role": "user",
+  "subscribedApps": [
+    {
+      "$oid": "69b85db95f80b8136358051d"
+    }
+  ],
+  "createdAt": {
+    "$date": "2026-03-16T19:40:35.639Z"
+  },
+  "updatedAt": {
+    "$date": "2026-03-16T19:47:14.628Z"
+  },
+  "__v": 0
+}]

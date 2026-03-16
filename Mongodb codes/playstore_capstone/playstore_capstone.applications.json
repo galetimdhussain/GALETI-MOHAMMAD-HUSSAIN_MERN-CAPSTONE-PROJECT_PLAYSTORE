@@ -1,0 +1,592 @@
+[{
+  "_id": {
+    "$oid": "69b80c6787e7a5fd784c0b0e"
+  },
+  "name": "Instagram",
+  "description": "Photo and short video sharing platform with reels, stories, creator tools, and social discovery.",
+  "version": "14.8.5.0",
+  "releaseDate": {
+    "$date": "2026-03-16T14:18:21.955Z"
+  },
+  "category": {
+    "$oid": "69b5462ed2680b590dde6860"
+  },
+  "genre": "Social Media",
+  "rating": 3,
+  "averageRating": 3,
+  "reviewCount": 2,
+  "visibility": "public",
+  "ownerId": {
+    "$oid": "69b80c6587e7a5fd784c0b04"
+  },
+  "iconUrl": "https://s.yimg.com/zb/imgv1/e9d6381f-6a16-39d9-b6f9-1467838c022c/t_500x300",
+  "featureHighlights": [
+    "Reels",
+    "Stories",
+    "Creator insights"
+  ],
+  "downloadCount": 3,
+  "lastAnnouncement": "bugs fixed....",
+  "createdAt": {
+    "$date": "2026-03-16T13:57:59.416Z"
+  },
+  "updatedAt": {
+    "$date": "2026-03-16T19:28:23.260Z"
+  },
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "69b80c6787e7a5fd784c0b0d"
+  },
+  "name": "WhatsApp",
+  "description": "Instant messaging platform for personal chats, calls, media sharing, and cross-device communication.",
+  "version": "2.26.4",
+  "releaseDate": {
+    "$date": "2026-02-10T00:00:00.000Z"
+  },
+  "category": {
+    "$oid": "69b5462ed2680b590dde6860"
+  },
+  "genre": "Messaging",
+  "rating": 4.5,
+  "averageRating": 4.5,
+  "reviewCount": 2,
+  "visibility": "public",
+  "ownerId": {
+    "$oid": "69b80c6587e7a5fd784c0b04"
+  },
+  "iconUrl": "https://s.yimg.com/zb/imgv1/688fa189-427f-34ea-b7db-95ac892b0df5/t_500x300",
+  "featureHighlights": [
+    "Encrypted chat",
+    "Voice and video calls",
+    "File sharing"
+  ],
+  "downloadCount": 2,
+  "lastAnnouncement": "Improved call stability, media sync, and device linking experience.",
+  "createdAt": {
+    "$date": "2026-03-16T13:57:59.416Z"
+  },
+  "updatedAt": {
+    "$date": "2026-03-16T19:28:23.391Z"
+  },
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "69b80c6787e7a5fd784c0b0f"
+  },
+  "name": "IMO",
+  "description": "Lightweight messaging and calling app for video chats, voice calls, and quick text conversations.",
+  "version": "2026.3.0",
+  "releaseDate": {
+    "$date": "2026-03-03T00:00:00.000Z"
+  },
+  "category": {
+    "$oid": "69b5462ed2680b590dde6860"
+  },
+  "genre": "Video Calling",
+  "rating": 4,
+  "averageRating": 4,
+  "reviewCount": 1,
+  "visibility": "public",
+  "ownerId": {
+    "$oid": "69b80c6587e7a5fd784c0b04"
+  },
+  "iconUrl": "https://sp.yimg.com/ib/th/id/OIP.5hJq2wyweBXztXChyXVaygHaHa?pid=Api&w=148&h=148&c=7&dpr=2&rs=1",
+  "featureHighlights": [
+    "Video calls",
+    "Low data mode",
+    "Fast messaging"
+  ],
+  "downloadCount": 1,
+  "lastAnnouncement": "Call quality and group chat stability were improved in this release.",
+  "createdAt": {
+    "$date": "2026-03-16T13:57:59.416Z"
+  },
+  "updatedAt": {
+    "$date": "2026-03-16T14:02:53.089Z"
+  },
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "69b80c6787e7a5fd784c0b10"
+  },
+  "name": "Telegram",
+  "description": "Cloud messaging app with fast chat sync, channels, large groups, and media sharing across devices.",
+  "version": "11.0.1",
+  "releaseDate": {
+    "$date": "2026-02-26T00:00:00.000Z"
+  },
+  "category": {
+    "$oid": "69b5462ed2680b590dde6860"
+  },
+  "genre": "Messaging",
+  "rating": 0,
+  "averageRating": 0,
+  "reviewCount": 0,
+  "visibility": "public",
+  "ownerId": {
+    "$oid": "69b80c6587e7a5fd784c0b04"
+  },
+  "iconUrl": "https://s.yimg.com/zb/imgv1/a9756dc7-5840-398b-9d7c-a262e956f840/t_500x300",
+  "featureHighlights": [
+    "Channels",
+    "Large groups",
+    "Cloud sync"
+  ],
+  "downloadCount": 0,
+  "lastAnnouncement": "Channel tools and media sharing improvements are included in the latest update.",
+  "createdAt": {
+    "$date": "2026-03-16T13:57:59.416Z"
+  },
+  "updatedAt": {
+    "$date": "2026-03-16T19:28:23.322Z"
+  },
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "69b80c6787e7a5fd784c0b11"
+  },
+  "name": "PUBG Mobile",
+  "description": "Battle royale shooter with multiplayer squads, ranked matches, and seasonal maps.",
+  "version": "3.2.0",
+  "releaseDate": {
+    "$date": "2026-02-24T00:00:00.000Z"
+  },
+  "category": {
+    "$oid": "69b3f27f98a733d22148e2fc"
+  },
+  "genre": "Battle Royale",
+  "rating": 4.3,
+  "averageRating": 4.3,
+  "reviewCount": 3,
+  "visibility": "public",
+  "ownerId": {
+    "$oid": "69b80c6587e7a5fd784c0b04"
+  },
+  "iconUrl": "https://sp.yimg.com/ib/th/id/OIP.DBuALb9Y4EzzMNRjF0HpgAHaHa?pid=Api&w=148&h=148&c=7&dpr=2&rs=1",
+  "featureHighlights": [
+    "Squad mode",
+    "Tournament ready",
+    "Season rewards"
+  ],
+  "downloadCount": 3,
+  "lastAnnouncement": "New arena mode and smoother matchmaking are now live.",
+  "createdAt": {
+    "$date": "2026-03-16T13:57:59.416Z"
+  },
+  "updatedAt": {
+    "$date": "2026-03-16T14:14:44.699Z"
+  },
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "69b80c6787e7a5fd784c0b12"
+  },
+  "name": "Free Fire MAX",
+  "description": "Action-packed survival shooter focused on fast-paced matches, competitive squads, and map-based strategy.",
+  "version": "8.4.0",
+  "releaseDate": {
+    "$date": "2026-03-05T00:00:00.000Z"
+  },
+  "category": {
+    "$oid": "69b3f27f98a733d22148e2fc"
+  },
+  "genre": "Survival Shooter",
+  "rating": 0,
+  "averageRating": 0,
+  "reviewCount": 0,
+  "visibility": "public",
+  "ownerId": {
+    "$oid": "69b80c6587e7a5fd784c0b04"
+  },
+  "iconUrl": "https://s.yimg.com/fz/api/res/1.2/UvtS0YSj6PxEiNlIQFgcJQ--~C/YXBwaWQ9c3JjaGRkO2ZpPWZpbGw7aD0zODQ7cT04MDt3PTUxMg--/https://s.yimg.com/am/60d/2fc043867bdd594bed3f874dc6d130ac",
+  "featureHighlights": [
+    "Fast matches",
+    "Elite pass rewards",
+    "Team strategy"
+  ],
+  "downloadCount": 0,
+  "lastAnnouncement": "Weapon balancing and new squad events were added this month.",
+  "createdAt": {
+    "$date": "2026-03-16T13:57:59.416Z"
+  },
+  "updatedAt": {
+    "$date": "2026-03-16T19:28:23.333Z"
+  },
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "69b80c6787e7a5fd784c0b15"
+  },
+  "name": "Myntra",
+  "description": "Fashion-first shopping platform for apparel, footwear, accessories, and style curation.",
+  "version": "4.9.1",
+  "releaseDate": {
+    "$date": "2026-02-18T00:00:00.000Z"
+  },
+  "category": {
+    "$oid": "69b3f27f98a733d22148e2fe"
+  },
+  "genre": "Shopping",
+  "rating": 5,
+  "averageRating": 5,
+  "reviewCount": 1,
+  "visibility": "public",
+  "ownerId": {
+    "$oid": "69b80c6587e7a5fd784c0b04"
+  },
+  "iconUrl": "https://s.yimg.com/zb/imgv1/9660a32b-34de-3825-be4d-d32d8bdd7471/t_500x300",
+  "featureHighlights": [
+    "Trend boards",
+    "Size guidance",
+    "Wishlist sync"
+  ],
+  "downloadCount": 1,
+  "lastAnnouncement": "Fresh spring collections are now available in the style feed.",
+  "createdAt": {
+    "$date": "2026-03-16T13:57:59.416Z"
+  },
+  "updatedAt": {
+    "$date": "2026-03-16T14:05:32.453Z"
+  },
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "69b80c6787e7a5fd784c0b16"
+  },
+  "name": "Pinterest",
+  "description": "Idea discovery app for fashion, decor, recipes, design references, and daily inspiration boards.",
+  "version": "1.8.4",
+  "releaseDate": {
+    "$date": "2026-01-19T00:00:00.000Z"
+  },
+  "category": {
+    "$oid": "69b3f27f98a733d22148e2fe"
+  },
+  "genre": "Lifestyle",
+  "rating": 0,
+  "averageRating": 0,
+  "reviewCount": 0,
+  "visibility": "public",
+  "ownerId": {
+    "$oid": "69b80c6587e7a5fd784c0b04"
+  },
+  "iconUrl": "https://s.yimg.com/zb/imgv1/6ac3bb26-16f9-3146-8507-c4bf8053cd4a/t_500x300",
+  "featureHighlights": [
+    "Idea boards",
+    "Saved pins",
+    "Style inspiration"
+  ],
+  "downloadCount": 0,
+  "lastAnnouncement": "Fresh fashion, decor, and recipe boards are now featured.",
+  "createdAt": {
+    "$date": "2026-03-16T13:57:59.416Z"
+  },
+  "updatedAt": {
+    "$date": "2026-03-16T19:28:23.344Z"
+  },
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "69b80c6787e7a5fd784c0b17"
+  },
+  "name": "Flo",
+  "description": "Wellness app that helps users track cycles, symptoms, reminders, and personalized health insights.",
+  "version": "1.6.3",
+  "releaseDate": {
+    "$date": "2026-02-02T00:00:00.000Z"
+  },
+  "category": {
+    "$oid": "69b3f27f98a733d22148e2ff"
+  },
+  "genre": "Health Tracking",
+  "rating": 5,
+  "averageRating": 5,
+  "reviewCount": 1,
+  "visibility": "public",
+  "ownerId": {
+    "$oid": "69b80c6587e7a5fd784c0b04"
+  },
+  "iconUrl": "https://flo.health/images/flo.svg",
+  "featureHighlights": [
+    "Cycle tracking",
+    "Symptom logging",
+    "Health reminders"
+  ],
+  "downloadCount": 1,
+  "lastAnnouncement": "Cycle insights and reminder settings have been improved.",
+  "createdAt": {
+    "$date": "2026-03-16T13:57:59.416Z"
+  },
+  "updatedAt": {
+    "$date": "2026-03-16T14:06:57.200Z"
+  },
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "69b80c6787e7a5fd784c0b18"
+  },
+  "name": "HealthifyMe",
+  "description": "Nutrition and fitness tracking app with calorie logging, coach plans, and progress monitoring.",
+  "version": "16.1.0",
+  "releaseDate": {
+    "$date": "2026-01-16T00:00:00.000Z"
+  },
+  "category": {
+    "$oid": "69b3f27f98a733d22148e300"
+  },
+  "genre": "Nutrition",
+  "rating": 4,
+  "averageRating": 4,
+  "reviewCount": 1,
+  "visibility": "public",
+  "ownerId": {
+    "$oid": "69b80c6587e7a5fd784c0b04"
+  },
+  "iconUrl": "https://s.yimg.com/zb/imgv1/7a13237e-7003-32ff-bbc7-752447e08db1/t_500x300",
+  "featureHighlights": [
+    "Meal logging",
+    "Coach plans",
+    "Progress dashboard"
+  ],
+  "downloadCount": 1,
+  "lastAnnouncement": "Food scan improvements are live in the latest release.",
+  "createdAt": {
+    "$date": "2026-03-16T13:57:59.416Z"
+  },
+  "updatedAt": {
+    "$date": "2026-03-16T14:07:52.659Z"
+  },
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "69b80c6787e7a5fd784c0b19"
+  },
+  "name": "Nike Training Club",
+  "description": "Fitness platform with guided workouts, mobility sessions, wellness plans, and structured training support.",
+  "version": "2.1.0",
+  "releaseDate": {
+    "$date": "2026-02-10T00:00:00.000Z"
+  },
+  "category": {
+    "$oid": "69b3f27f98a733d22148e300"
+  },
+  "genre": "Fitness",
+  "rating": 0,
+  "averageRating": 0,
+  "reviewCount": 0,
+  "visibility": "public",
+  "ownerId": {
+    "$oid": "69b80c6587e7a5fd784c0b04"
+  },
+  "iconUrl": "https://s.yimg.com/zb/imgv1/22a0c943-55d3-315a-8e0f-2baef03ab3a3/t_500x300",
+  "featureHighlights": [
+    "Workout plans",
+    "Mobility sessions",
+    "Wellness guidance"
+  ],
+  "downloadCount": 0,
+  "lastAnnouncement": "New strength and recovery workout collections are now available.",
+  "createdAt": {
+    "$date": "2026-03-16T13:57:59.417Z"
+  },
+  "updatedAt": {
+    "$date": "2026-03-16T19:28:23.361Z"
+  },
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "69b80c6787e7a5fd784c0b1a"
+  },
+  "name": "LinkedIn",
+  "description": "Professional networking platform for jobs, hiring, learning resources, and career updates.",
+  "version": "1.4.0",
+  "releaseDate": {
+    "$date": "2026-03-06T00:00:00.000Z"
+  },
+  "category": {
+    "$oid": "69b5462ed2680b590dde6861"
+  },
+  "genre": "Professional Network",
+  "rating": 4,
+  "averageRating": 4,
+  "reviewCount": 2,
+  "visibility": "public",
+  "ownerId": {
+    "$oid": "69b80c6587e7a5fd784c0b04"
+  },
+  "iconUrl": "https://s.yimg.com/zb/imgv1/051c505f-dc29-3303-81b2-5828c6e3b2e2/t_500x300",
+  "featureHighlights": [
+    "Jobs",
+    "Networking",
+    "Learning content"
+  ],
+  "downloadCount": 2,
+  "lastAnnouncement": "Profile insights and hiring recommendations were updated.",
+  "createdAt": {
+    "$date": "2026-03-16T13:57:59.417Z"
+  },
+  "updatedAt": {
+    "$date": "2026-03-16T19:39:13.128Z"
+  },
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "69b80c6787e7a5fd784c0b1b"
+  },
+  "name": "Canva",
+  "description": "Design and content creation platform for social posts, presentations, marketing visuals, and templates.",
+  "version": "7.3.5",
+  "releaseDate": {
+    "$date": "2026-02-14T00:00:00.000Z"
+  },
+  "category": {
+    "$oid": "69b5462ed2680b590dde6861"
+  },
+  "genre": "Design Tool",
+  "rating": 0,
+  "averageRating": 0,
+  "reviewCount": 0,
+  "visibility": "public",
+  "ownerId": {
+    "$oid": "69b80c6587e7a5fd784c0b04"
+  },
+  "iconUrl": "https://s.yimg.com/fz/api/res/1.2/zND4K9_2c5PMRiYG7jg0IA--~C/YXBwaWQ9c3JjaGRkO2ZpPWZpbGw7aD0zODQ7cT04MDt3PTUxMg--/https://s.yimg.com/am/60d/3f340387d639fcf1923998692a0165d7",
+  "featureHighlights": [
+    "Templates",
+    "Brand kits",
+    "Quick exports"
+  ],
+  "downloadCount": 0,
+  "lastAnnouncement": "Presentation templates and brand kit tools were improved.",
+  "createdAt": {
+    "$date": "2026-03-16T13:57:59.417Z"
+  },
+  "updatedAt": {
+    "$date": "2026-03-16T19:28:23.378Z"
+  },
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "69b80c6787e7a5fd784c0b13"
+  },
+  "name": "Contra Returns",
+  "description": "Classic arcade action game with modern missions, co-op battles, and upgraded weapon systems.",
+  "version": "5.1.2",
+  "releaseDate": {
+    "$date": "2026-01-29T00:00:00.000Z"
+  },
+  "category": {
+    "$oid": "69b3f27f98a733d22148e2fc"
+  },
+  "genre": "Arcade Shooter",
+  "rating": 5,
+  "averageRating": 5,
+  "reviewCount": 1,
+  "visibility": "public",
+  "ownerId": {
+    "$oid": "69b80c6587e7a5fd784c0b04"
+  },
+  "iconUrl": "https://tse3.mm.bing.net/th/id/OIP.3xiACilljzHlgsixzgTeMwHaHa?pid=Api&P=0&h=180",
+  "featureHighlights": [
+    "Boss battles",
+    "Co-op mode",
+    "Weapon upgrades"
+  ],
+  "downloadCount": 1,
+  "lastAnnouncement": "New challenge missions and boss stages have been unlocked.",
+  "createdAt": {
+    "$date": "2026-03-16T13:57:59.416Z"
+  },
+  "updatedAt": {
+    "$date": "2026-03-16T14:10:32.984Z"
+  },
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "69b80c6787e7a5fd784c0b14"
+  },
+  "name": "Nykaa Beauty",
+  "description": "Beauty shopping and discovery app with curated collections, offers, expert tips, and tutorials.find all your needs here",
+  "version": "5.4.2",
+  "releaseDate": {
+    "$date": "2026-01-28T00:00:00.000Z"
+  },
+  "category": {
+    "$oid": "69b3f27f98a733d22148e2fd"
+  },
+  "genre": "Beauty Commerce",
+  "rating": 4,
+  "averageRating": 4,
+  "reviewCount": 1,
+  "visibility": "public",
+  "ownerId": {
+    "$oid": "69b80c6587e7a5fd784c0b04"
+  },
+  "iconUrl": "https://tse3.mm.bing.net/th/id/OIP.hEKpp4AqzA53jgFXHbnFzAHaEK?pid=Api&P=0&h=180",
+  "featureHighlights": [
+    "Personalized picks",
+    "Flash offers",
+    "Beauty tips"
+  ],
+  "downloadCount": 1,
+  "lastAnnouncement": "Skincare bundles and festive offers were refreshed for this week.",
+  "createdAt": {
+    "$date": "2026-03-16T13:57:59.416Z"
+  },
+  "updatedAt": {
+    "$date": "2026-03-16T20:03:57.320Z"
+  },
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "69b85db95f80b8136358051d"
+  },
+  "name": "Super Mario",
+  "description": "Play the original Super Mario Bros game online for FREE! 🎮 How to play. Use arrows [↑→↓←] or W-A-S-D keys to move Mario",
+  "version": "2.9.8.1",
+  "releaseDate": {
+    "$date": "2026-03-16T19:48:24.961Z"
+  },
+  "category": {
+    "$oid": "69b3f27f98a733d22148e2fc"
+  },
+  "genre": "Arcade",
+  "rating": 5,
+  "averageRating": 5,
+  "reviewCount": 1,
+  "visibility": "public",
+  "ownerId": {
+    "$oid": "69b80c6587e7a5fd784c0b04"
+  },
+  "iconUrl": "https://s.yimg.com/zb/imgv1/cfe82064-7752-3069-bd8f-cfa0eb6d3948/t_500x300",
+  "featureHighlights": [
+    "Boss battles",
+    "Co-op mode",
+    "Weapon upgrades"
+  ],
+  "downloadCount": 1,
+  "lastAnnouncement": "Bugs removed and added new maps..",
+  "createdAt": {
+    "$date": "2026-03-16T19:44:57.101Z"
+  },
+  "updatedAt": {
+    "$date": "2026-03-16T19:48:25.048Z"
+  },
+  "__v": 0
+}]
