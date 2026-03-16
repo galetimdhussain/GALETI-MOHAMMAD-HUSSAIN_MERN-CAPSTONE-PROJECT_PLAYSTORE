@@ -25,7 +25,7 @@ function AppCard({ app, ownerMode = false, onToggleVisibility, onDelete, onAnnou
     <Card
       sx={{
         width: '100%',
-        height: ownerMode ? { xs: 760, md: 700 } : { xs: 620, md: 580 },
+        height: ownerMode ? { xs: 760, md: 700 } : { xs: 'auto', sm: 560, md: 535 },
         display: 'flex',
         flexDirection: 'column',
         borderRadius: 2,
@@ -38,11 +38,11 @@ function AppCard({ app, ownerMode = false, onToggleVisibility, onDelete, onAnnou
         },
       }}
     >
-      <Box sx={{ p: 2, pb: 0 }}>
+      <Box sx={{ p: { xs: 1.5, sm: 2 }, pb: 0 }}>
         <Box
           sx={{
             position: 'relative',
-            height: 250,
+            height: ownerMode ? 250 : { xs: 190, sm: 220 },
             borderRadius: 1.5,
             overflow: 'hidden',
             border: '1px solid rgba(148, 163, 184, 0.12)',
@@ -52,24 +52,37 @@ function AppCard({ app, ownerMode = false, onToggleVisibility, onDelete, onAnnou
           <Stack
             direction="row"
             spacing={1}
-            sx={{ position: 'absolute', top: 12, left: 12, right: 12, justifyContent: 'space-between', zIndex: 1 }}
+            sx={{
+              position: 'absolute',
+              top: 12,
+              left: 12,
+              right: 12,
+              justifyContent: ownerMode ? 'space-between' : 'flex-start',
+              flexWrap: 'wrap',
+              zIndex: 1,
+            }}
           >
             <Chip
               label={app.category?.name || 'Category'}
+              size="small"
               sx={{
                 bgcolor: '#F8FAFC',
                 color: '#0F172A',
                 border: '1px solid rgba(37,99,235,0.14)',
+                maxWidth: '100%',
               }}
             />
-            <Chip
-              label={app.visibility}
-              sx={{
-                textTransform: 'capitalize',
-                bgcolor: app.visibility === 'public' ? '#DCFCE7' : '#E2E8F0',
-                color: '#0F172A',
-              }}
-            />
+            {ownerMode ? (
+              <Chip
+                label={app.visibility}
+                size="small"
+                sx={{
+                  textTransform: 'capitalize',
+                  bgcolor: app.visibility === 'public' ? '#DCFCE7' : '#E2E8F0',
+                  color: '#0F172A',
+                }}
+              />
+            ) : null}
           </Stack>
 
           <Box
@@ -79,7 +92,7 @@ function AppCard({ app, ownerMode = false, onToggleVisibility, onDelete, onAnnou
               display: 'flex',
               alignItems: 'center',
               justifyContent: 'center',
-              p: 1.5,
+              p: { xs: 1.25, sm: 1.5 },
             }}
           >
             <Box
@@ -97,16 +110,16 @@ function AppCard({ app, ownerMode = false, onToggleVisibility, onDelete, onAnnou
         </Box>
       </Box>
 
-      <CardContent sx={{ flexGrow: 1, px: 2.25, pt: 2.25, pb: 1.5 }}>
-        <Stack spacing={1.5} sx={{ height: '100%' }}>
-          <Box>
-            <Typography variant="h5" sx={{ mb: 0.75, height: 32 }}>
+      <CardContent sx={{ flexGrow: 1, px: { xs: 1.75, sm: 2.25 }, pt: 2.25, pb: 1.5 }}>
+        <Stack spacing={1.5} sx={{ height: '100%', minWidth: 0 }}>
+          <Box sx={{ minWidth: 0 }}>
+            <Typography variant="h5" sx={{ mb: 0.75, minHeight: { xs: 'auto', sm: 32 }, overflowWrap: 'anywhere' }}>
               {app.name}
             </Typography>
             <Typography
               color="text.secondary"
               sx={{
-                height: 76,
+                minHeight: { xs: 'auto', sm: 72 },
                 overflow: 'hidden',
                 display: '-webkit-box',
                 WebkitLineClamp: 3,
@@ -118,8 +131,13 @@ function AppCard({ app, ownerMode = false, onToggleVisibility, onDelete, onAnnou
             </Typography>
           </Box>
 
-          <Stack direction="row" spacing={1} alignItems="center" justifyContent="space-between">
-            <Stack direction="row" spacing={1} alignItems="center">
+          <Stack
+            direction={{ xs: 'column', sm: 'row' }}
+            spacing={1}
+            alignItems={{ xs: 'flex-start', sm: 'center' }}
+            justifyContent="space-between"
+          >
+            <Stack direction="row" spacing={1} alignItems="center" sx={{ minWidth: 0, flexWrap: 'wrap' }} useFlexGap>
               <Rating value={Number(app.rating || 0)} precision={0.5} readOnly size="small" />
               <Typography variant="body2" color="text.secondary">
                 {formatRating(app.rating)}
@@ -136,9 +154,9 @@ function AppCard({ app, ownerMode = false, onToggleVisibility, onDelete, onAnnou
         </Stack>
       </CardContent>
 
-      <Divider sx={{ mx: 2.25 }} />
+      <Divider sx={{ mx: { xs: 1.75, sm: 2.25 } }} />
 
-      <CardActions sx={{ px: 2.25, py: 2, flexWrap: 'wrap', gap: 1, alignItems: 'stretch' }}>
+      <CardActions sx={{ px: { xs: 1.75, sm: 2.25 }, py: 2, flexWrap: 'wrap', gap: 1, alignItems: 'stretch' }}>
         <Button
           component={RouterLink}
           to={`/apps/${app.id}`}

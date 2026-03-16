@@ -10,26 +10,56 @@ export function AuthProvider({ children }) {
   const [isLoading, setIsLoading] = useState(true);
 
   useEffect(() => {
+    let isMounted = true;
+
     async function loadProfile() {
       if (!token) {
-        setUser(null);
-        setIsLoading(false);
+        if (isMounted) {
+          setUser(null);
+          setIsLoading(false);
+        }
         return;
       }
 
       try {
         const profile = await authService.getProfile();
-        setUser(profile);
+        if (isMounted) {
+          setUser(profile);
+        }
       } catch (error) {
         removeStoredToken();
-        setToken(null);
-        setUser(null);
+        if (isMounted) {
+          setToken(null);
+          setUser(null);
+        }
       } finally {
-        setIsLoading(false);
+        if (isMounted) {
+          setIsLoading(false);
+        }
+      }
+    }
+
+    function handleFocusRefresh() {
+      if (token) {
+        loadProfile();
+      }
+    }
+
+    function handleVisibilityRefresh() {
+      if (token && document.visibilityState === 'visible') {
+        loadProfile();
       }
     }
 
     loadProfile();
+    window.addEventListener('focus', handleFocusRefresh);
+    document.addEventListener('visibilitychange', handleVisibilityRefresh);
+
+    return () => {
+      isMounted = false;
+      window.removeEventListener('focus', handleFocusRefresh);
+      document.removeEventListener('visibilitychange', handleVisibilityRefresh);
+    };
   }, [token]);
 
   const value = {

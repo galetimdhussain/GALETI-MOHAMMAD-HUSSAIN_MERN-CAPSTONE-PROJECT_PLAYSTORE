@@ -11,6 +11,7 @@ const Login = lazy(() => import('../pages/Login'));
 const Register = lazy(() => import('../pages/Register'));
 const UserProfile = lazy(() => import('../pages/UserProfile'));
 const OwnerDashboard = lazy(() => import('../pages/OwnerDashboard'));
+const UserManagement = lazy(() => import('../pages/UserManagement'));
 const AddApp = lazy(() => import('../pages/AddApp'));
 const EditApp = lazy(() => import('../pages/EditApp'));
 const NotificationsPage = lazy(() => import('../pages/Notifications'));
@@ -46,6 +47,14 @@ function AppRoutes() {
             element={
               <ProtectedRoute roles={['owner']}>
                 <OwnerDashboard />
+              </ProtectedRoute>
+            }
+          />
+          <Route
+            path="/owner/users"
+            element={
+              <ProtectedRoute roles={['owner']}>
+                <UserManagement />
               </ProtectedRoute>
             }
           />

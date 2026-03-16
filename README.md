@@ -1,64 +1,202 @@
-# Play Store MERN Capstone Project
+                              # Play Store MERN Capstone Project
 
-## 1. Project Overview
+## Project Summary
 
-This repository contains a submission-ready full-stack MERN Play Store application prepared for capstone evaluation, presentation, viva, and GitHub publication.
+This repository contains the final Play Store MERN capstone project
+The application currently supports only two roles:
 
-Implemented roles:
+- `user`
+- `owner`
+## folder structure 
 
-- `User`: register, login, logout, search apps, browse categories, filter by rating, view app details, review apps, download apps, receive update notifications, and access a profile page.
-- `Owner`: register, login, logout, create apps, update apps, delete apps, hide or unhide apps, review download counts, see user comments, receive download notifications, announce updates, and manage apps from a dashboard.
+**Root Path:** `d:\HUSSAIN\HUSSAIN\WIPRO PRESKILL\GALETI MOHAMMAD HUSSAIN_capstone-project_PlayStore`
 
-The current project state includes:
+```
+`GALETI MOHAMMAD HUSSAIN_capstone-project_PlayStore`
+|
+|
+├── backend
+│   ├── config
+│   │   ├── db.js
+│   │   └── env.js
+│   ├── controllers
+│   │   ├── appController.js
+│   │   ├── authController.js
+│   │   ├── categoryController.js
+│   │   ├── downloadController.js
+│   │   ├── notificationController.js
+│   │   ├── reviewController.js
+│   │   └── userController.js
+│   ├── middlewares
+│   │   ├── authMiddleware.js
+│   │   ├── errorMiddleware.js
+│   │   ├── roleMiddleware.js
+│   │   └── validate.js
+│   ├── models
+│   │   ├── Application.js
+│   │   ├── Category.js
+│   │   ├── Download.js
+│   │   ├── Notification.js
+│   │   ├── Review.js
+│   │   └── User.js
+│   ├── routes
+│   │   ├── appRoutes.js
+│   │   ├── authRoutes.js
+│   │   ├── categoryRoutes.js
+│   │   ├── downloadRoutes.js
+│   │   ├── notificationRoutes.js
+│   │   ├── reviewRoutes.js
+│   │   └── userRoutes.js
+│   ├── services
+│   │   ├── applicationService.js
+│   │   ├── authService.js
+│   │   ├── categoryService.js
+│   │   ├── downloadService.js
+│   │   ├── notificationService.js
+│   │   ├── reviewService.js
+│   │   └── userService.js
+│   ├── tests
+│   │   └── api.test.js
+│   ├── utils
+│   │   ├── ApiError.js
+│   │   ├── apiResponse.js
+│   │   ├── asyncHandler.js
+│   │   ├── constants.js
+│   │   ├── jwt.js
+│   │   └── serializers.js
+│   ├── validators
+│   │   ├── appValidators.js
+│   │   ├── authValidators.js
+│   │   ├── downloadValidators.js
+│   │   ├── reviewValidators.js
+│   │   └── userValidators.js
+│   ├── .env.example
+│   ├── app.js
+│   ├── jest.config.js
+│   ├── package.json
+│   └── server.js
+├── database
+│   └── seed.js
+├── docs
+│   ├── api-docs.md
+│   ├── architecture.md
+│   └── requirement-checklist.md
+├── frontend
+│   ├── public
+│   │   └── index.html
+│   ├── src
+│   │   ├── components
+│   │   │   ├── apps
+│   │   │   │   ├── AppCard.jsx
+│   │   │   │   ├── AppCard.test.jsx
+│   │   │   │   ├── AppFilters.jsx
+│   │   │   │   └── AppForm.jsx
+│   │   │   ├── common
+│   │   │   │   ├── EmptyState.jsx
+│   │   │   │   ├── LoadingScreen.jsx
+│   │   │   │   └── PageHero.jsx
+│   │   │   ├── layout
+│   │   │   │   └── AppShell.jsx
+│   │   │   ├── notifications
+│   │   │   │   └── NotificationList.jsx
+│   │   │   └── reviews
+│   │   │       ├── ReviewForm.jsx
+│   │   │       └── ReviewList.jsx
+│   │   ├── contexts
+│   │   │   └── AuthContext.jsx
+│   │   ├── hooks
+│   │   │   └── useAuth.js
+│   │   ├── pages
+│   │   │   ├── AddApp.jsx
+│   │   │   ├── AppDetails.jsx
+│   │   │   ├── AppListing.jsx
+│   │   │   ├── EditApp.jsx
+│   │   │   ├── Home.jsx
+│   │   │   ├── Login.jsx
+│   │   │   ├── Notifications.jsx
+│   │   │   ├── OwnerDashboard.jsx
+│   │   │   ├── Register.jsx
+│   │   │   ├── UserManagement.jsx
+│   │   │   └── UserProfile.jsx
+│   │   ├── routes
+│   │   │   ├── AppRoutes.jsx
+│   │   │   └── ProtectedRoute.jsx
+│   │   ├── services
+│   │   │   ├── appService.js
+│   │   │   ├── appService.test.js
+│   │   │   ├── authService.js
+│   │   │   ├── authService.test.js
+│   │   │   ├── categoryService.js
+│   │   │   ├── downloadService.js
+│   │   │   ├── http.js
+│   │   │   ├── notificationService.js
+│   │   │   ├── reviewService.js
+│   │   │   └── userService.js
+│   │   ├── styles
+│   │   │   ├── global.css
+│   │   │   └── theme.js
+│   │   ├── test
+│   │   ├── utils
+│   │   │   ├── formatters.js
+│   │   │   └── storage.js
+│   │   ├── App.js
+│   │   ├── index.js
+│   │   └── setupTests.js
+│   ├── test-results
+│   │   └── .last-run.json
+│   ├── tests
+│   │   └── smoke.spec.js
+│   ├── .env.example
+│   ├── package.json
+│   └── playwright.config.js
+├── .gitignore
+├── README.md
+├── README_EXECUTION.md
+├── README_THESIS.md
+├── package-lock.json
+└── package.json
+```
 
-- modular Node.js and Express backend
-- MongoDB schema aligned to the Play Store capstone brief
-- React frontend built with React Scripts and Material UI
-- JWT authentication with protected routes
-- Formik + Yup client-side validation
-- Joi backend validation
-- seeded demo data for smooth evaluator execution
-- API, component, service, and E2E testing
-- modern responsive UI refinement across user and owner flows
-- documentation for execution, MongoDB, JWT, Postman, GitHub usage, and thesis preparation
+---
 
-## 2. Problem Statement Alignment
+## Current Functional Scope
 
-The implemented system satisfies the main Play Store capstone requirements:
+### User features
 
-- two roles: `User` and `Owner`
-- register, login, logout
-- app search by name
-- category browsing with required categories: `games`, `beauty`, `fashion`, `women`, `health`
-- rating filter
-- app details with name, description, version, release date, rating, and genre
-- reviews and comments
-- owner CRUD on apps
-- visibility control
-- download tracking
-- owner and user notifications
-- SPA navigation with React Router
-- JWT session handling using local storage
-- responsive UI
-- API, component, service, and E2E testing
+- Register as a normal user
+- Login and logout
+- Browse featured applications on the home page
+- Search the application catalog by name
+- Filter applications by category and rating
+- View detailed application pages
+- Submit reviews
+- Download applications
+- Receive notifications when subscribed applications are updated
+- Access a profile page
 
-Additional seeded demo categories were added for catalog realism:
+### Owner features
 
-- `social`
-- `technology`
+- Login and logout
+- Access the owner dashboard
+- Create, edit, hide, unhide, and delete applications
+- Review download counts and recent user comments
+- Announce application updates to subscribed users
+- Access the owner-only User Management page
+- Promote a `user` account to `owner`
+- Delete a `user` account from the User Management page
 
-## 3. Technology Stack
+## Current Architecture
 
 ### Frontend
 
 - React
 - React Router DOM
+- React Scripts
 - Material UI
 - Axios
-- React Scripts
 - Formik
 - Yup
-- React Testing Library + Jest
+- React Testing Library and Jest
 - Playwright
 
 ### Backend
@@ -72,9 +210,9 @@ Additional seeded demo categories were added for catalog realism:
 - bcryptjs
 - Helmet
 - express-mongo-sanitize
-- Jest + Supertest
+- Jest and Supertest
 
-## 4. Final Folder Structure
+## Current Project Structure
 
 ```text
 PlayStore-MERN/
@@ -113,105 +251,47 @@ PlayStore-MERN/
     requirement-checklist.md
   README.md
   README_EXECUTION.md
-  README_MONGODB.md
-  README_POSTMAN.md
-  README_JWT.md
-  README_GITHUB.md
-  README_THESIS.md
-  README_HANDOFF_CODEX.md
+ 
 ```
 
-## 5. Current Application Modules
+## Current Frontend Pages
 
-### Backend Modules
+- `Home`
+- `AppListing`
+- `AppDetails`
+- `Login`
+- `Register`
+- `UserProfile`
+- `Notifications`
+- `OwnerDashboard`
+- `UserManagement`
+- `AddApp`
+- `EditApp`
 
-- `config`: database and environment configuration
-- `models`: `User`, `Application`, `Category`, `Review`, `Download`, `Notification`
-- `controllers`: auth, app, category, review, download, notification request handlers
-- `services`: business logic for auth, apps, categories, reviews, downloads, notifications
-- `middlewares`: authentication, authorization, validation, and error handling
-- `validators`: Joi schemas for auth, apps, reviews, and downloads
-- `tests`: API integration tests with Mongo memory fallback to local MongoDB test database
+## Current Backend Modules
 
-### Frontend Modules
+### Models
 
-- `components`: reusable UI such as app cards, filters, forms, shell, reviews, and notifications
-- `pages`: `Home`, `AppListing`, `AppDetails`, `Login`, `Register`, `UserProfile`, `OwnerDashboard`, `AddApp`, `EditApp`, `Notifications`
-- `services`: API clients for auth, apps, categories, reviews, downloads, notifications
-- `contexts`: auth session state
-- `routes`: route configuration and protected route wrapper
-- `styles`: global CSS and MUI theme
-- `tests`: Jest component and service tests plus Playwright smoke tests
+- `User`
+- `Category`
+- `Application`
+- `Review`
+- `Download`
+- `Notification`
 
-## 6. Database Schema Summary
+### Route groups
 
-### users
+- `/api/auth`
+- `/api/categories`
+- `/api/apps`
+- `/api/reviews`
+- `/api/downloads`
+- `/api/notifications`
+- `/api/users`
 
-- `name`
-- `email`
-- `password`
-- `role`
-- `subscribedApps`
-- timestamps
+## Main API Surface
 
-### categories
-
-- `name`
-- `slug`
-- `description`
-- `isActive`
-- timestamps
-
-### applications
-
-- `name`
-- `description`
-- `version`
-- `releaseDate`
-- `category`
-- `genre`
-- `rating`
-- `averageRating`
-- `reviewCount`
-- `visibility`
-- `ownerId`
-- `iconUrl`
-- `featureHighlights`
-- `downloadCount`
-- `lastAnnouncement`
-- timestamps
-
-### reviews
-
-- `userId`
-- `appId`
-- `rating`
-- `comment`
-- `timestamp`
-- timestamps
-
-### downloads
-
-- `userId`
-- `appId`
-- `downloadDate`
-- timestamps
-
-### notifications
-
-- `recipientId`
-- `recipientRole`
-- `type`
-- `title`
-- `message`
-- `relatedAppId`
-- `isRead`
-- `metadata`
-- timestamps
-
-## 7. Main API Methods
-
-### Info Routes
+### Public and health
 
 - `GET /`
 - `GET /api`
@@ -257,107 +337,71 @@ PlayStore-MERN/
 - `PATCH /api/notifications/:id/read`
 - `PATCH /api/notifications/read-all`
 
-## 8. Functional Flow
+### Owner user management
 
-1. A user or owner registers or logs in.
-2. The backend returns a JWT token.
-3. The frontend stores the token in local storage.
-4. Protected requests include `Authorization: Bearer <token>`.
-5. Users browse apps, search by name, filter by category and rating, open details, review apps, and download them.
-6. Owners create and manage apps from the dashboard.
-7. Downloads create owner notifications.
-8. Owner update announcements create user notifications for subscribed apps.
-9. Logout clears the frontend token and calls the backend logout endpoint.
+- `GET /api/users`
+- `PUT /api/users/:id/role`
+- `DELETE /api/users/:id`
 
-## 9. Seed Data Summary
+## Current Seed Snapshot
 
-Current seed setup includes:
+The seed file no longer contains the old hardcoded demo dataset. It now stores a snapshot of the current live MongoDB data and recreates that exact state when `npm run seed` is run.
 
-- 2 owners
-- 2 users
+Current snapshot counts:
+
 - 7 categories
-- 12 applications in total
-- 11 public applications visible to end users after seeding
-- 1 hidden application for visibility testing
-- seeded reviews, downloads, and notifications
+- 5 users
+- 16 applications
+- 16 reviews
+- 17 downloads
+- 13 notifications
+- 16 public applications
+- 0 hidden applications
 
-Primary demo credentials:
+Known root owner account in the current snapshot:
 
-- `owner@playstore.dev / Password123`
-- `owner2@playstore.dev / Password123`
-- `user@playstore.dev / Password123`
-- `user2@playstore.dev / Password123`
+- `hussaingaleti786@gmail.com / Hussain@786`
 
-## 10. Testing Coverage
+The current seed snapshot preserves MongoDB ids and document relationships so the restored data matches the current working database structure.
 
-- API integration tests: backend auth, app creation, review, download, and notification flow
-- Component tests: React UI rendering
-- Service tests: frontend auth and app service methods
-- E2E smoke tests: public landing and registration navigation flow
-- Production build verification: frontend CRA build
+## Current Role Rules
 
-## 11. Frontend Validation Design
+- The system uses only `user` and `owner`
+- The frontend registration page creates only `user` accounts
+- Owners can promote a `user` to `owner` from the User Management page
+- Owners can delete a `user` from the User Management page
+- Owner accounts cannot be promoted again from the panel
+- Owner accounts cannot be deleted from the panel
 
-- Formik manages form state for login, register, owner app form, and review submission
-- Yup provides client-side validation schemas for those forms
-- Joi remains the backend validation layer for API security and request validation
+## UI Notes
 
-## 12. Documentation Map
+- Public app cards no longer show the unnecessary `Public` chip
+- Owner dashboard cards still show visibility state
+- Public app grids are three columns on desktop and stack cleanly on mobile
+- The header uses the current round white Play Store logo with red bag styling
+- A shared footer now appears across the project for both roles with the project support contact email
 
-- [README_EXECUTION.md](README_EXECUTION.md): exact setup, environment, run, and verification steps
-- [README_MONGODB.md](README_MONGODB.md): MongoDB setup, collections, sample documents, and seeding notes
-- [README_POSTMAN.md](README_POSTMAN.md): API request and response guide for manual verification
-- [README_JWT.md](README_JWT.md): JWT authentication and protected route usage
-- [README_GITHUB.md](README_GITHUB.md): first upload, future updates, and Git rollback guide for VS Code and GitHub
-- [README_THESIS.md](README_THESIS.md): full thesis style project report ready to adapt into a final submission document
-- [docs/architecture.md](docs/architecture.md): technical architecture and system flow
-- [docs/api-docs.md](docs/api-docs.md): endpoint reference
-- [docs/requirement-checklist.md](docs/requirement-checklist.md): requirement mapping and verification
+## Testing and Verification
 
-## 13. Viva Notes
+Available commands:
 
-### Why MERN
+- `npm run seed`
+- `npm run dev`
+- `npm run test:api`
+- `npm run test:component`
+- `npm run test:e2e`
+- `npm run build --workspace frontend`
 
-- same language across frontend and backend
-- fast integration between API and SPA
-- flexible MongoDB schema for app catalog data
-- strong ecosystem for auth, routing, UI, forms, and testing
+Latest confirmed checks in the current workspace:
 
-### Why JWT
+- `npm run test:api` passed
+- `npm run build --workspace frontend` passed
 
-- simple SPA session handling
-- stateless backend authentication
-- easy route protection on frontend and backend
+Notes:
 
-### Why Formik + Yup
+- On Windows, backend API tests use the local MongoDB fallback directly for stability
+- The frontend build may still show a `react-scripts` deprecation warning from the toolchain, but the build completes successfully
 
-- cleaner frontend form state handling
-- reusable validation schemas
-- easier explanation for client-side validation during viva
-- no backend contract changes required
 
-### Why Service Layer
 
-- cleaner controllers
-- reusable business logic
-- easier testing and maintenance
 
-## 14. Current Project Status
-
-The current project state is suitable for capstone walkthrough and demonstration with:
-
-- working backend info and health routes
-- working user and owner flows
-- seeded accounts for quick testing
-- modernized frontend layout and branding
-- synchronized documentation set
-- GitHub upload guide
-- thesis style report file for final document preparation
-
-## 15. Future Improvements
-
-- richer dashboard analytics charts
-- avatar or image upload support for app icons
-- pagination and advanced filters
-- stronger notification delivery using email or push
-- CI/CD automation and deployment pipeline

@@ -51,48 +51,48 @@ function LogoMark() {
   return (
     <Box
       sx={{
-        width: { xs: 60, md: 70 },
-        height: { xs: 60, md: 70 },
+        width: { xs: 58, md: 66 },
+        height: { xs: 58, md: 66 },
         borderRadius: '50%',
         position: 'relative',
         display: 'grid',
         placeItems: 'center',
-        background: 'radial-gradient(circle at 30% 30%, #67E8F9 0%, #2563EB 44%, #4338CA 100%)',
-        border: '1px solid rgba(255,255,255,0.16)',
-        boxShadow: '0 18px 34px rgba(2, 6, 23, 0.24), inset 0 1px 0 rgba(255,255,255,0.18)',
+        background: 'linear-gradient(180deg, #FFFFFF 0%, #F8FAFC 100%)',
+        border: '1px solid rgba(226, 232, 240, 0.9)',
+        boxShadow: '0 16px 34px rgba(2, 6, 23, 0.2), inset 0 1px 0 rgba(255,255,255,0.95)',
         overflow: 'hidden',
       }}
     >
       <Box
         sx={{
           position: 'absolute',
-          inset: 7,
+          inset: 5,
           borderRadius: '50%',
-          border: '1px solid rgba(255,255,255,0.12)',
-          background: 'linear-gradient(180deg, rgba(255,255,255,0.06), rgba(255,255,255,0.01))',
+          border: '1px solid rgba(226, 232, 240, 0.9)',
+          background: 'radial-gradient(circle at 30% 25%, rgba(255,255,255,0.98) 0%, rgba(241,245,249,0.94) 100%)',
         }}
       />
       <Box
         sx={{
           position: 'absolute',
-          width: { xs: 34, md: 40 },
-          height: { xs: 28, md: 32 },
-          bottom: { xs: 13, md: 15 },
-          borderRadius: '8px 8px 12px 12px',
-          background: 'linear-gradient(180deg, #F8FAFC 0%, #E0E7FF 100%)',
-          boxShadow: '0 12px 22px rgba(15, 23, 42, 0.22)',
-          border: '1px solid rgba(255,255,255,0.72)',
+          width: { xs: 30, md: 34 },
+          height: { xs: 23, md: 26 },
+          bottom: { xs: 15, md: 17 },
+          borderRadius: '9px 9px 11px 11px',
+          background: 'linear-gradient(180deg, #EF4444 0%, #DC2626 100%)',
+          border: '1px solid rgba(185, 28, 28, 0.42)',
+          boxShadow: '0 14px 24px rgba(185, 28, 28, 0.28)',
         }}
       />
       <Box
         sx={{
           position: 'absolute',
-          width: { xs: 18, md: 22 },
-          height: { xs: 11, md: 13 },
-          top: { xs: 16, md: 18 },
+          width: { xs: 15, md: 17 },
+          height: { xs: 10, md: 11 },
+          top: { xs: 12, md: 14 },
           left: '50%',
           transform: 'translateX(-50%)',
-          border: '3px solid rgba(255,255,255,0.98)',
+          border: '3px solid #DC2626',
           borderBottom: 'none',
           borderRadius: '16px 16px 0 0',
         }}
@@ -100,27 +100,14 @@ function LogoMark() {
       <Box
         sx={{
           position: 'absolute',
-          width: { xs: 20, md: 24 },
-          height: { xs: 3, md: 4 },
-          top: { xs: 28, md: 31 },
+          width: { xs: 14, md: 16 },
+          height: { xs: 10, md: 12 },
+          top: { xs: 23, md: 25 },
           left: '50%',
           transform: 'translateX(-50%)',
-          borderRadius: 999,
-          background: 'linear-gradient(90deg, rgba(191,219,254,0.2), rgba(255,255,255,0.95), rgba(191,219,254,0.2))',
-        }}
-      />
-      <Box
-        sx={{
-          position: 'absolute',
-          width: 0,
-          height: 0,
-          left: '50%',
-          top: '50%',
-          transform: 'translate(-33%, 2%)',
-          borderTop: '9px solid transparent',
-          borderBottom: '9px solid transparent',
-          borderLeft: '15px solid #2563EB',
-          filter: 'drop-shadow(0 3px 6px rgba(37, 99, 235, 0.25))',
+          borderRadius: '0 0 8px 8px',
+          background: 'rgba(255,255,255,0.96)',
+          clipPath: 'polygon(0 0, 100% 0, 86% 100%, 14% 100%)',
         }}
       />
       <Box
@@ -128,22 +115,33 @@ function LogoMark() {
           position: 'absolute',
           width: { xs: 8, md: 9 },
           height: { xs: 8, md: 9 },
-          right: { xs: 14, md: 16 },
-          top: { xs: 13, md: 15 },
+          right: { xs: 13, md: 15 },
+          top: { xs: 14, md: 15 },
           borderRadius: '50%',
-          background: 'linear-gradient(180deg, #FDE68A, #F59E0B)',
-          boxShadow: '0 0 16px rgba(245, 158, 11, 0.45)',
+          background: 'rgba(254, 242, 242, 0.86)',
         }}
       />
       <Box
         sx={{
           position: 'absolute',
-          width: { xs: 6, md: 7 },
-          height: { xs: 6, md: 7 },
-          left: { xs: 15, md: 17 },
-          bottom: { xs: 17, md: 20 },
+          width: { xs: 22, md: 24 },
+          height: { xs: 1.5, md: 2 },
+          left: '50%',
+          bottom: { xs: 18, md: 20 },
+          transform: 'translateX(-50%)',
+          borderRadius: 999,
+          background: 'rgba(255,255,255,0.38)',
+        }}
+      />
+      <Box
+        sx={{
+          position: 'absolute',
+          width: { xs: 8, md: 9 },
+          height: { xs: 8, md: 9 },
+          left: { xs: 14, md: 15 },
+          bottom: { xs: 14, md: 16 },
           borderRadius: '50%',
-          background: 'rgba(103, 232, 249, 0.45)',
+          background: 'rgba(254, 242, 242, 0.4)',
         }}
       />
     </Box>
@@ -301,6 +299,7 @@ function AppShell({ children }) {
               <NavButton to="/apps" label="Applications" />
               {isAuthenticated ? <NavButton to="/profile" label="Profile" /> : null}
               {user?.role === 'owner' ? <NavButton to="/owner" label="Dashboard" /> : null}
+              {user?.role === 'owner' ? <NavButton to="/owner/users" label="User Management" /> : null}
             </Stack>
           </Container>
         </Toolbar>
@@ -320,21 +319,18 @@ function AppShell({ children }) {
           backdropFilter: 'blur(10px)',
         }}
       >
-        <Container
-          maxWidth="xl"
-          sx={{
-            display: 'flex',
-            flexDirection: { xs: 'column', md: 'row' },
-            justifyContent: 'space-between',
-            alignItems: { xs: 'flex-start', md: 'center' },
-            gap: 1.5,
-          }}
-        >
-          <Typography variant="body2" sx={{ color: 'text.secondary', fontWeight: 700 }}>
-            Belongs to GALETI MOHAMMAD HUSSAIN
-          </Typography>
-          <Typography variant="body2" color="text.secondary">
-            A professional Play Store platform for application discovery, reviews, downloads, and owner management.
+        <Container maxWidth="xl">
+          <Typography
+            align="center"
+            variant="body2"
+            color="text.secondary"
+            sx={{ fontWeight: 600, fontSize: { xs: '0.95rem', md: '1rem' } }}
+          >
+            For queries or project support, reach out to{' '}
+            <Box component="span" sx={{ color: '#DC2626', fontWeight: 800 }}>
+              hussaingaleti786@gmail.com
+            </Box>
+            .
           </Typography>
         </Container>
       </Box>

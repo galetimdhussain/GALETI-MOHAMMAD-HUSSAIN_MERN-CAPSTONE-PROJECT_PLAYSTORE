@@ -1,128 +1,352 @@
-# API Overview
+# API Documentation
 
-Base API URL:
+## Base URL
 
 ```text
 http://localhost:5000/api
 ```
 
-Additional runtime info routes:
+## General Response Style
 
-- `GET /`
-- `GET /api`
-- `GET /api/health`
+Most successful responses use this pattern:
 
-## Authentication Routes
+```json
+{
+  "success": true,
+  "message": "Optional message",
+  "data": {}
+}
+```
 
-### `POST /api/auth/register`
+## 1. Info Routes
 
-Purpose: create a new `user` or `owner` account and return JWT + profile.
+### GET /
 
-### `POST /api/auth/login`
+Purpose:
 
-Purpose: authenticate an existing account and return JWT + profile.
+- backend root info
 
-### `POST /api/auth/logout`
+### GET /api
 
-Purpose: complete the logout flow and allow the frontend to clear the stored token.
+Purpose:
 
-### `GET /api/auth/me`
+- API root summary
 
-Purpose: return the currently authenticated user profile.
+### GET /api/health
 
-## Category Routes
+Purpose:
 
-### `GET /api/categories`
+- health check
 
-Purpose: return active categories for filters and forms.
+## 2. Authentication
 
-Current categories include the required capstone categories plus `social` and `technology` for demo breadth.
+### POST /api/auth/register
 
-## Application Routes
+Auth required: No
 
-### `GET /api/apps`
+Recommended payload for current project use:
 
-Purpose: return public application listing.
+```json
+{
+  "name": "Manual User",
+  "email": "manualuser@example.com",
+  "password": "Password123",
+  "role": "user"
+}
+```
 
-### `GET /api/apps/search`
+Note:
 
-Purpose: search by app name and filter by category or minimum rating.
+- the frontend registration page creates only `user` accounts
+- for evaluation, the current root owner account is typically used instead of registering owners manually
 
-Query params supported:
+### POST /api/auth/login
+
+Auth required: No
+
+Example root owner payload:
+
+```json
+{
+  "email": "hussaingaleti786@gmail.com",
+  "password": "Hussain@786"
+}
+```
+
+### POST /api/auth/logout
+
+Auth required: Yes
+
+Headers:
+
+```text
+Authorization: Bearer <token>
+```
+
+### GET /api/auth/me
+
+Auth required: Yes
+
+Returns the current authenticated user.
+
+## 3. Categories
+
+### GET /api/categories
+
+Auth required: No
+
+Returns active categories for filters and app forms.
+
+## 4. Applications
+
+### GET /api/apps
+
+Auth required: No
+
+Returns public applications.
+
+Supported query parameters:
 
 - `search`
 - `category`
 - `rating`
-- `ownerOnly`
 
-### `GET /api/apps/:id`
+### GET /api/apps/search
 
-Purpose: return a single application detail record.
+Auth required: No
 
-### `POST /api/apps`
+Behavior matches filtered application listing.
 
-Purpose: owner creates a new app.
+### GET /api/apps/:id
 
-### `PUT /api/apps/:id`
+Auth required: No for public apps
 
-Purpose: owner updates app details.
+Returns a single application detail view.
 
-### `PATCH /api/apps/:id/visibility`
+### POST /api/apps
 
-Purpose: owner hides or unhides an app.
+Auth required: Yes
+Role required: `owner`
 
-### `DELETE /api/apps/:id`
+Example payload:
 
-Purpose: owner deletes an app.
+```json
+{
+  "name": "Battle Forge",
+  "description": "Competitive mobile strategy with team-based battle arenas.",
+  "version": "1.0.0",
+  "releaseDate": "2026-03-13",
+  "category": "<categoryId>",
+  "genre": "Strategy",
+  "visibility": "public",
+  "iconUrl": "https://example.com/icon.png",
+  "featureHighlights": ["Ranked matches", "Guild chat"]
+}
+```
 
-### `GET /api/apps/owner/dashboard/summary`
+### PUT /api/apps/:id
 
-Purpose: return owner stats, app list, recent downloads, and recent reviews.
+Auth required: Yes
+Role required: `owner`
 
-### `POST /api/apps/:id/announce-update`
+Updates an existing owner application.
 
-Purpose: owner updates version and sends notifications to subscribed users.
+### PATCH /api/apps/:id/visibility
 
-## Review Routes
+Auth required: Yes
+Role required: `owner`
 
-### `POST /api/reviews`
+Example payload:
 
-Purpose: authenticated user adds one review per app.
+```json
+{
+  "visibility": "hidden"
+}
+```
 
-### `GET /api/reviews/app/:id`
+Allowed values:
 
-Purpose: return all reviews for an application.
+- `public`
+- `hidden`
 
-### `DELETE /api/reviews/:id`
+### DELETE /api/apps/:id
 
-Purpose: authenticated user deletes their own review.
+Auth required: Yes
+Role required: `owner`
 
-## Download Routes
+### GET /api/apps/owner/dashboard/summary
 
-### `POST /api/downloads`
+Auth required: Yes
+Role required: `owner`
 
-Purpose: authenticated user downloads an app, increments download count, and triggers owner notification.
+Returns:
 
-### `GET /api/downloads/owner`
+- owner stats
+- owner applications
+- recent downloads
+- recent reviews
 
-Purpose: owner reviews app download history.
+### POST /api/apps/:id/announce-update
 
-## Notification Routes
+Auth required: Yes
+Role required: `owner`
 
-### `GET /api/notifications`
+Example payload:
 
-Purpose: return notifications for the logged-in account.
+```json
+{
+  "version": "1.1.0",
+  "message": "This update adds new challenge levels and performance fixes."
+}
+```
 
-### `PATCH /api/notifications/:id/read`
+## 5. Reviews
 
-Purpose: mark one notification as read.
+### POST /api/reviews
 
-### `PATCH /api/notifications/read-all`
+Auth required: Yes
 
-Purpose: mark all notifications as read.
+Example payload:
 
-## Validation Notes
+```json
+{
+  "appId": "<appId>",
+  "rating": 5,
+  "comment": "Smooth gameplay and polished UI."
+}
+```
 
-- frontend uses Formik + Yup for client-side validation and form UX
-- backend uses Joi for API request validation and security
-- JWT protects authenticated and owner-only routes
+### GET /api/reviews/app/:id
+
+Auth required: No
+
+### DELETE /api/reviews/:id
+
+Auth required: Yes
+
+## 6. Downloads
+
+### POST /api/downloads
+
+Auth required: Yes
+
+Example payload:
+
+```json
+{
+  "appId": "<appId>"
+}
+```
+
+Effect:
+
+- creates download record
+- increments download count
+- creates owner notification
+- adds the app to the user subscription list
+
+### GET /api/downloads/owner
+
+Auth required: Yes
+Role required: `owner`
+
+## 7. Notifications
+
+### GET /api/notifications
+
+Auth required: Yes
+
+### PATCH /api/notifications/:id/read
+
+Auth required: Yes
+
+Example body:
+
+```json
+{}
+```
+
+### PATCH /api/notifications/read-all
+
+Auth required: Yes
+
+Example body:
+
+```json
+{}
+```
+
+## 8. Owner User Management
+
+The current project includes owner-only user promotion and deletion.
+
+### GET /api/users
+
+Auth required: Yes
+Role required: `owner`
+
+Returns all registered users with fields such as:
+
+- id
+- name
+- email
+- role
+- createdAt
+
+### PUT /api/users/:id/role
+
+Auth required: Yes
+Role required: `owner`
+
+Current supported role update:
+
+```json
+{
+  "role": "owner"
+}
+```
+
+Rules:
+
+- only a current `user` should be promoted
+- accounts already marked as `owner` return an error
+- there are only two valid roles in the system: `user` and `owner`
+
+### DELETE /api/users/:id
+
+Auth required: Yes
+Role required: `owner`
+
+Rules:
+
+- only a current `user` can be deleted
+- owner accounts return an error
+- deleting a user also removes that user's reviews, downloads, and personal notifications
+- affected application counts are recalculated after deletion
+
+## 9. Current Roles and Visibility Values
+
+### Role values
+
+- `user`
+- `owner`
+
+### Visibility values
+
+- `public`
+- `hidden`
+
+## 10. Recommended Manual Test Order
+
+1. `GET /api/health`
+2. `POST /api/auth/login` as the root owner account
+3. `GET /api/categories`
+4. `GET /api/apps`
+5. `GET /api/apps/:id`
+6. `POST /api/reviews`
+7. `POST /api/downloads`
+8. `GET /api/notifications`
+9. `GET /api/apps/owner/dashboard/summary`
+10. `GET /api/users`
+11. `PUT /api/users/:id/role`
+12. `DELETE /api/users/:id`

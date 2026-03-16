@@ -14,25 +14,14 @@ const initialFilters = {
   rating: '',
 };
 
-const twoColumnGridSx = {
-  position: 'relative',
-  '&::before': {
-    content: '""',
-    position: 'absolute',
-    top: 0,
-    bottom: 0,
-    left: '50%',
-    width: '1px',
-    bgcolor: 'rgba(148,163,184,0.22)',
-    transform: 'translateX(-50%)',
-    display: { xs: 'none', md: 'block' },
-  },
-};
-
-const twoColumnInnerSx = {
+const publicGridSx = {
   display: 'grid',
-  gridTemplateColumns: { xs: '1fr', md: 'repeat(2, minmax(0, 1fr))' },
-  gap: 3,
+  gridTemplateColumns: {
+    xs: '1fr',
+    sm: 'repeat(2, minmax(0, 1fr))',
+    md: 'repeat(3, minmax(0, 1fr))',
+  },
+  gap: { xs: 2.5, md: 3 },
   alignItems: 'stretch',
 };
 
@@ -108,14 +97,12 @@ function AppListing() {
             <Typography color="text.secondary">
               Showing {apps.length} application{apps.length > 1 ? 's' : ''}.
             </Typography>
-            <Box sx={twoColumnGridSx}>
-              <Box sx={twoColumnInnerSx}>
-                {apps.map((app) => (
-                  <Box key={app.id} sx={{ display: 'flex' }}>
-                    <AppCard app={app} />
-                  </Box>
-                ))}
-              </Box>
+            <Box sx={publicGridSx}>
+              {apps.map((app) => (
+                <Box key={app.id} sx={{ display: 'flex' }}>
+                  <AppCard app={app} />
+                </Box>
+              ))}
             </Box>
           </Stack>
         </Box>

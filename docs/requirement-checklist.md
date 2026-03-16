@@ -1,117 +1,244 @@
-# Requirement Fulfilment Checklist
+# Requirement Checklist
 
-## Implemented User Features
+## Primary Reference Rule
+
+The main source of truth is the Play Store capstone problem statement.
+
+Where any secondary document differs, follow the capstone problem statement first.
+
+## 1. Role Model
+
+Required:
+
+- user role
+- owner role
+
+Current status: Completed
+
+Current implementation:
+
+- only `user` and `owner` exist in the system
+- frontend registration creates only `user` accounts
+- seeded owner account is available for evaluation
+
+## 2. Registration, Login, Logout
+
+Required:
 
 - register
 - login
 - logout
-- search applications by name
-- view application details
-- browse category-based application listing
-- filter by rating
-- submit reviews and comments
-- receive update notifications
-- access a user profile page
 
-## Implemented Owner Features
+Current status: Completed
 
-- register
-- login
-- logout
-- create applications
-- update applications
-- delete applications
-- hide and unhide applications
-- view download counts
-- view user comments
-- receive download notifications
-- announce updates to users
+Implementation notes:
 
-## Implemented Backend Modules
+- frontend registration page is locked to normal user registration
+- login works for both users and owners
+- logout route and frontend logout flow are implemented
 
-- `config`
-- `controllers`
-- `models`
-- `routes`
-- `services`
-- `middlewares`
-- `validators`
-- `utils`
-- `tests`
+## 3. Search Applications by Name
 
-## Implemented Frontend Modules
+Required: Yes
 
-- `components`
-- `pages`
-- `services`
-- `contexts`
-- `hooks`
-- `routes`
-- `styles`
-- `utils`
+Current status: Completed
 
-## Frontend Validation / State Choices
+Implementation notes:
 
-- `Formik` for form state management
-- `Yup` for client-side validation schemas
-- `Context API` for auth state
-- no `Redux`
+- Applications page supports search by name
+- backend supports filtered search endpoints
 
-## Implemented API Methods
+## 4. Browse by Category
 
-- `GET /`
-- `GET /api`
-- `GET /api/health`
-- `POST /api/auth/register`
-- `POST /api/auth/login`
-- `POST /api/auth/logout`
-- `GET /api/auth/me`
-- `GET /api/categories`
-- `GET /api/apps`
-- `GET /api/apps/search`
-- `GET /api/apps/:id`
-- `POST /api/apps`
-- `PUT /api/apps/:id`
-- `PATCH /api/apps/:id/visibility`
-- `DELETE /api/apps/:id`
-- `GET /api/apps/owner/dashboard/summary`
-- `POST /api/apps/:id/announce-update`
-- `POST /api/reviews`
-- `GET /api/reviews/app/:id`
-- `DELETE /api/reviews/:id`
-- `POST /api/downloads`
-- `GET /api/downloads/owner`
-- `GET /api/notifications`
-- `PATCH /api/notifications/:id/read`
-- `PATCH /api/notifications/read-all`
+Required categories from brief:
 
-## Seed / Demo Coverage
+- games
+- beauty
+- fashion
+- women
+- health
 
-- 2 owners
-- 2 users
-- 7 categories
-- 12 applications
-- seeded reviews
-- seeded downloads
-- seeded notifications
+Current status: Completed
 
-## Verification Completed
+Additional current categories for richer dataset and UI coverage:
 
-- dependency installation
-- database seed execution
+- social
+- technology
+
+## 5. Filter by Rating
+
+Required: Yes
+
+Current status: Completed
+
+Implementation notes:
+
+- minimum rating filter is available on the Applications page
+
+## 6. View App Details
+
+Required fields include:
+
+- name
+- description
+- release date
+- version
+- rating
+- genre
+
+Current status: Completed
+
+Implementation notes:
+
+- App Details page shows these fields along with owner name, download count, and review section
+
+## 7. Reviews and Comments
+
+Required: Yes
+
+Current status: Completed
+
+Implementation notes:
+
+- users can submit reviews
+- app details page loads current reviews
+
+## 8. Download Tracking
+
+Required: Yes
+
+Current status: Completed
+
+Implementation notes:
+
+- users can download an app once
+- download records are stored
+- owner notifications are generated
+
+## 9. Owner CRUD on Applications
+
+Required:
+
+- create
+- update
+- delete
+- manage visibility
+
+Current status: Completed
+
+Implementation notes:
+
+- owner dashboard includes app actions
+- Add App and Edit App pages are implemented
+- visibility toggle is implemented with `public` and `hidden`
+
+## 10. Owner Can See Downloads and Comments
+
+Required: Yes
+
+Current status: Completed
+
+Implementation notes:
+
+- owner dashboard shows recent downloads
+- owner dashboard shows recent user comments
+
+## 11. Owner Notifications on Download
+
+Required: Yes
+
+Current status: Completed
+
+Implementation notes:
+
+- download flow creates owner notifications
+
+## 12. User Notifications on App Updates
+
+Required: Yes
+
+Current status: Completed
+
+Implementation notes:
+
+- owner update announcements create notifications for subscribed users
+
+## 13. JWT Authentication
+
+Required: Yes
+
+Current status: Completed
+
+Implementation notes:
+
+- JWT token issued on login and register
+- protected frontend and backend routes are implemented
+
+## 14. Responsive UI
+
+Required: Yes
+
+Current status: Completed
+
+Implementation notes:
+
+- Material UI based responsive layout
+- public app grids behave cleanly across desktop and mobile
+- owner dashboard remains separate from the public card layout
+- shared footer contact line appears consistently across the application
+
+## 15. Testing
+
+Required by project quality expectations: Yes
+
+Current status: Completed
+
+Current coverage:
+
 - backend API tests
-- frontend Jest suite for component and service methods
-- frontend production build
-- frontend end-to-end smoke tests
-- backend runtime health check
-- backend root and API root smoke checks
-- owner dashboard smoke check with seeded account
+- frontend component and service tests
+- frontend Playwright E2E smoke tests
+- frontend build verification
 
-## Requirement Notes
+Latest confirmed in current workspace:
 
-- the project follows the main capstone brief with two roles: `user` and `owner`
-- JWT is implemented
-- localStorage session handling is implemented
-- client-side validation is implemented using Formik + Yup
-- backend validation is implemented using Joi
-- SPA navigation is implemented using React Router
+- `npm run test:api` passed
+- `npm run build --workspace frontend` passed
+
+## 16. Documentation
+
+Required for final delivery: Yes
+
+Current status: Completed
+
+Current documentation set:
+
+- root README
+- execution guide
+- MongoDB guide
+- Postman guide
+- JWT guide
+- GitHub guide
+- thesis report
+- architecture doc
+- API doc
+- this requirement checklist
+- Codex handoff guide
+
+## 17. Current Enhancements Beyond Core Brief
+
+Enhancements included in the current implementation:
+
+- owner-only User Management page
+- owner can promote a `user` to `owner`
+- owner can delete a normal `user` account
+- current MongoDB dataset is preserved through a snapshot-based `seed.js`
+
+These enhancements do not change the core role model because the system still uses only:
+
+- `user`
+- `owner`
+
+## Final Summary
+
+The project currently satisfies the capstone functional requirements and also includes owner-only user management and snapshot-based data recovery, while preserving the original two-role architecture.

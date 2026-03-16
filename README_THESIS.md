@@ -3,8 +3,163 @@ CAPSTONE PROJECT REPORT
 Project Title: Play Store Application
 Project Type: Full Stack MERN Web Application
 Prepared By: Galeti Mohammad Hussain
-Date: 16 March 2026
+Date: 17 March 2026
 Technology Domain: MERN Stack with JWT Authentication
+
+## folder structure 
+
+**Root Path:** `d:\HUSSAIN\HUSSAIN\WIPRO PRESKILL\GALETI MOHAMMAD HUSSAIN_capstone-project_PlayStore`
+
+```
+`GALETI MOHAMMAD HUSSAIN_capstone-project_PlayStore`
+|
+|
+├── backend
+│   ├── config
+│   │   ├── db.js
+│   │   └── env.js
+│   ├── controllers
+│   │   ├── appController.js
+│   │   ├── authController.js
+│   │   ├── categoryController.js
+│   │   ├── downloadController.js
+│   │   ├── notificationController.js
+│   │   ├── reviewController.js
+│   │   └── userController.js
+│   ├── middlewares
+│   │   ├── authMiddleware.js
+│   │   ├── errorMiddleware.js
+│   │   ├── roleMiddleware.js
+│   │   └── validate.js
+│   ├── models
+│   │   ├── Application.js
+│   │   ├── Category.js
+│   │   ├── Download.js
+│   │   ├── Notification.js
+│   │   ├── Review.js
+│   │   └── User.js
+│   ├── routes
+│   │   ├── appRoutes.js
+│   │   ├── authRoutes.js
+│   │   ├── categoryRoutes.js
+│   │   ├── downloadRoutes.js
+│   │   ├── notificationRoutes.js
+│   │   ├── reviewRoutes.js
+│   │   └── userRoutes.js
+│   ├── services
+│   │   ├── applicationService.js
+│   │   ├── authService.js
+│   │   ├── categoryService.js
+│   │   ├── downloadService.js
+│   │   ├── notificationService.js
+│   │   ├── reviewService.js
+│   │   └── userService.js
+│   ├── tests
+│   │   └── api.test.js
+│   ├── utils
+│   │   ├── ApiError.js
+│   │   ├── apiResponse.js
+│   │   ├── asyncHandler.js
+│   │   ├── constants.js
+│   │   ├── jwt.js
+│   │   └── serializers.js
+│   ├── validators
+│   │   ├── appValidators.js
+│   │   ├── authValidators.js
+│   │   ├── downloadValidators.js
+│   │   ├── reviewValidators.js
+│   │   └── userValidators.js
+│   ├── .env.example
+│   ├── app.js
+│   ├── jest.config.js
+│   ├── package.json
+│   └── server.js
+├── database
+│   └── seed.js
+├── docs
+│   ├── api-docs.md
+│   ├── architecture.md
+│   └── requirement-checklist.md
+├── frontend
+│   ├── public
+│   │   └── index.html
+│   ├── src
+│   │   ├── components
+│   │   │   ├── apps
+│   │   │   │   ├── AppCard.jsx
+│   │   │   │   ├── AppCard.test.jsx
+│   │   │   │   ├── AppFilters.jsx
+│   │   │   │   └── AppForm.jsx
+│   │   │   ├── common
+│   │   │   │   ├── EmptyState.jsx
+│   │   │   │   ├── LoadingScreen.jsx
+│   │   │   │   └── PageHero.jsx
+│   │   │   ├── layout
+│   │   │   │   └── AppShell.jsx
+│   │   │   ├── notifications
+│   │   │   │   └── NotificationList.jsx
+│   │   │   └── reviews
+│   │   │       ├── ReviewForm.jsx
+│   │   │       └── ReviewList.jsx
+│   │   ├── contexts
+│   │   │   └── AuthContext.jsx
+│   │   ├── hooks
+│   │   │   └── useAuth.js
+│   │   ├── pages
+│   │   │   ├── AddApp.jsx
+│   │   │   ├── AppDetails.jsx
+│   │   │   ├── AppListing.jsx
+│   │   │   ├── EditApp.jsx
+│   │   │   ├── Home.jsx
+│   │   │   ├── Login.jsx
+│   │   │   ├── Notifications.jsx
+│   │   │   ├── OwnerDashboard.jsx
+│   │   │   ├── Register.jsx
+│   │   │   ├── UserManagement.jsx
+│   │   │   └── UserProfile.jsx
+│   │   ├── routes
+│   │   │   ├── AppRoutes.jsx
+│   │   │   └── ProtectedRoute.jsx
+│   │   ├── services
+│   │   │   ├── appService.js
+│   │   │   ├── appService.test.js
+│   │   │   ├── authService.js
+│   │   │   ├── authService.test.js
+│   │   │   ├── categoryService.js
+│   │   │   ├── downloadService.js
+│   │   │   ├── http.js
+│   │   │   ├── notificationService.js
+│   │   │   ├── reviewService.js
+│   │   │   └── userService.js
+│   │   ├── styles
+│   │   │   ├── global.css
+│   │   │   └── theme.js
+│   │   ├── test
+│   │   ├── utils
+│   │   │   ├── formatters.js
+│   │   │   └── storage.js
+│   │   ├── App.js
+│   │   ├── index.js
+│   │   └── setupTests.js
+│   ├── test-results
+│   │   └── .last-run.json
+│   ├── tests
+│   │   └── smoke.spec.js
+│   ├── .env.example
+│   ├── package.json
+│   └── playwright.config.js
+├── .gitignore
+├── README.md
+├── README_EXECUTION.md
+├── README_THESIS.md
+├── package-lock.json
+└── package.json
+```
+
+---
+
+## Project Overview
+
 
 TABLE OF CONTENTS
 
@@ -28,23 +183,23 @@ TABLE OF CONTENTS
 18. Notification Workflow
 19. User Workflow
 20. Owner Workflow
-21. User Interface Design Considerations
-22. Testing Strategy and Quality Assurance
-23. Project Setup and Execution Flow
-24. Challenges Faced and Resolutions
-25. Project Outcomes
-26. Limitations
-27. Future Enhancements
-28. Conclusion
-29. References
+21. Owner User Management Enhancement
+22. Dataset and Seed Snapshot Strategy
+23. User Interface Design Considerations
+24. Testing Strategy and Quality Assurance
+25. Project Setup and Execution Flow
+26. Challenges Faced and Resolutions
+27. Project Outcomes
+28. Limitations
+29. Future Enhancements
+30. Conclusion
+31. References
 
 1. INTRODUCTION
 
-The Play Store Application is a full stack web application developed to simulate a digital application marketplace where software owners can publish their mobile or software applications and end users can browse, review, and download them. The project was developed as a capstone submission using the MERN stack, which includes MongoDB, Express.js, React, and Node.js. The objective of the project is not only to satisfy the given academic problem statement but also to produce a system that resembles a real software product in architecture, code organization, functionality, testing, and presentation readiness.
+The Play Store Application is a full stack web application developed to simulate a digital application marketplace where software owners can publish their applications and end users can browse, review, and download them. The project was developed as a capstone submission using the MERN stack, which includes MongoDB, Express.js, React, and Node.js. The objective of the project is to satisfy the academic problem statement while also producing a system that resembles a real software product in architecture, code organization, functionality, testing, and presentation quality.
 
-The system supports two roles, namely User and Owner. A User can register, log in, browse the application catalogue, search by name, filter by category and rating, view detailed information, submit reviews, download applications, and receive notifications when subscribed applications are updated. An Owner can register, log in, create applications, edit application metadata, hide or unhide applications from public visibility, monitor download counts, read user comments, receive notifications when an application is downloaded, and announce updates to users who are subscribed to that application.
-
-The project was built with a strong emphasis on modular backend design, maintainable frontend structure, secure JWT based authentication, professional documentation, seeded sample data, and testing at multiple levels. The final system is intended to be suitable for submission, presentation, and viva.
+The system supports two roles only, namely User and Owner. A User can register, log in, browse the application catalogue, search by name, filter by category and rating, view detailed information, submit reviews, download applications, and receive notifications when subscribed applications are updated. An Owner can log in, create applications, edit application metadata, hide or unhide applications from public visibility, monitor download counts, read user comments, receive notifications when an application is downloaded, announce updates to users who are subscribed to that application, and manage user accounts from the owner-only User Management page.
 
 2. PROBLEM STATEMENT
 
@@ -56,17 +211,7 @@ The Play Store Application addresses this need by providing a unified web platfo
 
 The project was required to address both functional and academic objectives. From a functional perspective, it demonstrates how a modern marketplace style application can be designed using a JavaScript based end to end technology stack. From an academic perspective, it satisfies the capstone requirement to design a full stack application involving authentication, database modelling, REST APIs, frontend integration, testing, and professional documentation.
 
-The need for this project can be described in the following points.
-
-First, it demonstrates a complete full stack workflow from database schema creation to deployment ready frontend build generation.
-
-Second, it shows how different user roles can be enforced securely with JWT based access control and protected routes.
-
-Third, it illustrates how MongoDB collections and relationships can be mapped to a realistic business domain with users, applications, reviews, downloads, notifications, and categories.
-
-Fourth, it provides a responsive single page application experience with structured routing and modular React component design.
-
-Fifth, it serves as a professional portfolio project that can be demonstrated to evaluators as a real software system rather than a minimal assignment.
+The project also demonstrates practical engineering concerns such as modular design, validation at both client and server layers, seeded data recovery, repeatable test execution, and documentation that supports setup, manual verification, GitHub delivery, and viva preparation.
 
 4. PROJECT OBJECTIVES
 
@@ -75,21 +220,19 @@ The primary objectives of the Play Store Application are as follows.
 1. To create a working Play Store style platform with two roles, User and Owner.
 2. To implement secure authentication using JWT tokens.
 3. To provide users with search, filter, review, and download functionality.
-4. To provide owners with application management, visibility control, dashboard access, and notification handling.
+4. To provide owners with application management, visibility control, dashboard access, notification handling, and user account management tools.
 5. To design a MongoDB schema that supports the required relationships and operations.
 6. To expose RESTful APIs through Express.js following modular architecture principles.
 7. To create a responsive React frontend with clear navigation and protected routes.
 8. To implement client side and server side validation.
 9. To include test coverage at API, component, service, and end to end levels.
-10. To produce documentation suitable for project execution, manual verification, viva explanation, and final report preparation.
+10. To produce documentation suitable for project execution, manual verification, viva explanation, GitHub updates, and final report preparation.
 
 5. SCOPE OF THE PROJECT
 
-The project scope includes account registration, login, logout, application browsing, search, category filtering, rating based filtering, application details viewing, review submission, download tracking, application CRUD operations for owners, owner notifications for downloads, user notifications for application updates, a user profile page, and an owner dashboard.
+The project scope includes account registration, login, logout, application browsing, search, category filtering, rating based filtering, application details viewing, review submission, download tracking, application CRUD operations for owners, owner notifications for downloads, user notifications for application updates, a user profile page, an owner dashboard, and an owner-only User Management page for promoting or deleting normal user accounts.
 
-The project also includes seed data for easier evaluation, documentation for MongoDB setup and API verification, and frontend improvements for responsive presentation quality.
-
-The current scope does not include payment handling, external cloud storage, real push notifications, multi tenant deployment, social login, or native mobile app packaging. Those features are possible future enhancements but are outside the current capstone scope.
+The current scope does not include payment handling, external cloud storage, real push notifications, social login, multi tenant deployment, or native mobile app packaging. Those features remain outside the capstone scope.
 
 6. STAKEHOLDERS AND USER ROLES
 
@@ -99,95 +242,71 @@ User Role
 A user represents a person browsing the platform for applications. A user can create an account, sign in, explore applications, read application details, apply filters, add reviews, download apps, and receive update notifications for subscribed applications.
 
 Owner Role
-An owner represents an application developer or publisher. An owner can create and manage application records, hide or unhide apps, monitor download activity, and announce updates.
+An owner represents an application developer or publisher. An owner can create and manage application records, hide or unhide apps, monitor download activity, announce updates, promote a user to owner, and delete a normal user account when required.
 
 Evaluator or Guide
-An evaluator reviews whether the project satisfies the given capstone statement, demonstrates good architecture, and is properly documented and tested.
+An evaluator reviews whether the project satisfies the capstone statement, demonstrates good architecture, and is properly documented and tested.
 
 Developer
 The developer is responsible for implementation, code quality, integration, documentation, testing, and maintenance.
 
 7. REQUIREMENT ANALYSIS
 
-The capstone problem statement required the following user side functionality. Registration, login, logout, application search by name, viewing details such as name, description, release date, version, ratings, and genre, browsing by categories such as games, beauty, fashion, women, and health, filtering based on ratings, writing reviews or comments, and receiving update notifications.
+The capstone problem statement required user registration, login, logout, application search by name, viewing details such as name, description, release date, version, ratings, and genre, browsing by categories such as games, beauty, fashion, women, and health, filtering based on ratings, writing reviews or comments, and receiving update notifications.
 
-The owner side functionality required registration, login, logout, create, update, delete, and manage visibility of applications, view the number of downloads, read user comments, receive download notifications, and announce updates to users.
+The owner side required login, logout, create, update, delete, and manage visibility of applications, view the number of downloads, read user comments, receive download notifications, and announce updates to users.
 
-The implemented system satisfies these requirements through the following modules.
-
-Authentication module for account registration and login.
-Application catalogue module for listing, searching, filtering, and details viewing.
-Review module for user comments and ratings.
-Download module for recording downloads and creating owner notifications.
-Notification module for owner alerts and user update announcements.
-Owner dashboard module for app management and performance monitoring.
+The implemented system satisfies these requirements. In addition to the core brief, the current project also includes an owner-only user management enhancement while still maintaining only two roles in the system.
 
 8. DEVELOPMENT METHODOLOGY AND SPRINT EXECUTION
 
 The implementation followed a staged approach aligned to the capstone sprint intent.
 
-Sprint One focused on database design, authentication flows, project scaffolding, and initial React structure. During this phase the MongoDB collections were designed, backend configuration was established, base authentication routes were implemented, and the frontend skeleton was created.
-
-Sprint Two focused on application search, filter mechanisms, owner side application updates, review functionality, JWT based security implementation, and frontend testing support.
-
-Sprint Three focused on service layer structuring, controller based routing, notification logic, frontend and backend integration, responsive layout improvement, and final documentation and verification.
-
-Although the original sprint wording mentions items such as admin and Spring security, the implemented project follows the main problem statement correctly by using the two required roles, User and Owner, and by using JWT based Node.js security in the MERN stack context.
+Sprint One focused on database design, authentication flows, project scaffolding, and initial React structure. Sprint Two focused on application search, filters, owner app management, review functionality, and JWT based security implementation. Sprint Three focused on service layer structuring, controller based routing, notification logic, frontend and backend integration, responsive layout refinement, user management enhancement, and documentation completion.
 
 9. TECHNOLOGY STACK AND JUSTIFICATION
 
 Frontend Technologies
-The frontend is built with React and React Router DOM. React was selected because it supports reusable components, stateful UI logic, and single page application navigation. React Scripts was used as the project runner because it aligns with the classroom context and avoids introducing an unfamiliar build tool.
-
-Material UI was selected for the component library. It provides consistent UI primitives, responsive grid support, typography control, and fast layout refinement. Axios is used for API communication. Formik and Yup are used for client side form state management and validation.
+The frontend is built with React and React Router DOM. React was selected because it supports reusable components, stateful UI logic, and single page application navigation. React Scripts is used as the project runner because it fits the classroom workflow and current project setup. Material UI is the UI framework. Axios is used for API communication. Formik and Yup are used for client side form state management and validation.
 
 Backend Technologies
 The backend is built with Node.js and Express.js. Express was selected because it provides lightweight routing, middleware support, and a clear structure for REST API design. Mongoose is used to model and validate MongoDB data. JWT is used for stateless authentication. bcryptjs is used for password hashing. Joi is used for backend request validation. Helmet and express-mongo-sanitize are used to improve security.
 
 Database Technology
-MongoDB was selected because the application has a catalogue driven data model with flexible document structure. Mongoose makes it easier to define schemas, relations, and validation rules while still benefiting from MongoDB's flexibility.
+MongoDB was selected because the application has a catalogue driven data model with flexible document structure. Mongoose makes it easier to define schemas, relations, and validation rules.
 
 Testing Technologies
-Jest and Supertest are used for backend API testing. React Testing Library and Jest are used for frontend component and service testing. Playwright is used for end to end browser style testing.
+Jest and Supertest are used for backend API testing. React Testing Library and Jest are used for frontend component and service testing. Playwright is used for end to end smoke testing.
 
 10. SYSTEM ARCHITECTURE
 
-The overall system follows a client server model.
-
-The React frontend runs in the browser and communicates with the Express backend through HTTP requests. The backend exposes REST APIs and interacts with MongoDB through Mongoose models. Authentication is handled using JWT tokens. Protected frontend pages depend on stored authentication state, while protected backend routes use middleware to verify the token and role.
-
-The runtime flow is as follows. A user opens the frontend, authenticates through the auth endpoints, receives a JWT token, and the frontend stores that token in local storage. The token is attached to protected requests through the Axios layer. The backend verifies the token, applies validation and role checks, performs the requested business logic through service modules, and stores or retrieves data from MongoDB.
+The overall system follows a client server model. The React frontend runs in the browser and communicates with the Express backend through HTTP requests. The backend exposes REST APIs and interacts with MongoDB through Mongoose models. Authentication is handled using JWT tokens. Protected frontend pages depend on stored authentication state, while protected backend routes use middleware to verify the token and current role from the database.
 
 11. FRONTEND DESIGN AND MODULE STRUCTURE
 
 The frontend follows a structured folder organization inside frontend/src.
 
-components contains reusable interface pieces such as app cards, filters, review forms, navigation shell, and page hero sections.
-pages contains route level pages such as Home, App Listing, App Details, Login, Register, User Profile, Notifications, Owner Dashboard, Add App, and Edit App.
-services contains Axios based modules for auth, apps, categories, reviews, downloads, and notifications.
-contexts contains the authentication context that stores session state.
-hooks contains useAuth.
+components contains reusable interface pieces such as app cards, filters, review forms, navigation shell, notifications, and page hero sections.
+pages contains route level pages such as Home, App Listing, App Details, Login, Register, User Profile, Notifications, Owner Dashboard, User Management, Add App, and Edit App.
+services contains Axios based modules for auth, apps, categories, reviews, downloads, notifications, and users.
+contexts contains the authentication context that stores session state and refreshes profile data on focus and visibility changes.
 routes contains route definitions and protected route wrappers.
 styles contains the Material UI theme and global CSS.
 utils contains helpers for token storage and formatting.
-
-The frontend is built as a single page application. Navigation happens through React Router without full page reload. Protected pages are shown only when the user is authenticated and the role requirements are satisfied.
 
 12. BACKEND DESIGN AND MODULE STRUCTURE
 
 The backend uses a modular architecture inside the backend folder.
 
 config contains environment and database configuration.
-controllers receives requests and returns responses.
-models defines Mongoose schemas.
-routes defines API endpoints.
-services contains business logic.
-middlewares contains authentication, authorization, validation, and error handling.
-validators contains Joi schemas.
-utils contains helpers such as JWT utilities and constants.
-tests contains backend API tests.
-
-This architecture improves separation of concerns. Controllers stay thin, services hold business rules, and validators isolate request schema logic. This makes the codebase easier to test and maintain.
+controllers receive requests and return responses.
+models define Mongoose schemas.
+routes define API endpoints.
+services contain business logic.
+middlewares contain authentication, authorization, validation, and error handling.
+validators contain Joi schemas.
+utils contain helpers such as JWT utilities and serializers.
+tests contain backend API tests.
 
 13. DATABASE DESIGN AND RELATIONSHIP MODEL
 
@@ -200,14 +319,7 @@ Reviews collection stores user ratings and comments linked to an application.
 Downloads collection stores each download event linking a user and an application.
 Notifications collection stores both user and owner notifications.
 
-The main relationships are as follows.
-
-One owner can create many applications.
-One user can write many reviews.
-One application can have many reviews.
-One application can have many downloads.
-One user can receive many notifications.
-One user can subscribe to many applications for update tracking.
+The valid user roles are only user and owner.
 
 14. DETAILED COLLECTION DESIGN
 
@@ -229,8 +341,6 @@ Important fields include userId, appId, and downloadDate.
 Notifications
 Important fields include recipientId, recipientRole, type, title, message, relatedAppId, isRead, and metadata.
 
-This schema design supports the full set of required operations without introducing unnecessary complexity.
-
 15. API DESIGN AND ENDPOINT SUMMARY
 
 The backend exposes RESTful APIs under the /api prefix.
@@ -240,11 +350,6 @@ POST /api/auth/register
 POST /api/auth/login
 POST /api/auth/logout
 GET /api/auth/me
-
-Information routes
-GET /
-GET /api
-GET /api/health
 
 Category route
 GET /api/categories
@@ -274,21 +379,22 @@ GET /api/notifications
 PATCH /api/notifications/:id/read
 PATCH /api/notifications/read-all
 
-These APIs support the complete flow of the application while keeping a clean separation between resource types.
+User management routes
+GET /api/users
+PUT /api/users/:id/role
+DELETE /api/users/:id
 
 16. AUTHENTICATION, AUTHORIZATION, AND SECURITY
 
 Authentication is implemented using JSON Web Tokens. After successful login or registration, the backend returns a signed JWT token and the frontend stores it in local storage. Protected requests include the token in the Authorization header using the Bearer format.
 
-Authorization is role based. Certain routes are available to any authenticated account, while owner specific routes are restricted by middleware that checks the role field.
+Authorization is role based. Owner routes verify the current user role from the database. This design allows a promoted user to receive owner access after the role is changed in MongoDB.
 
 Security measures include password hashing with bcryptjs, request validation with Joi, protection headers using Helmet, sanitization against MongoDB operator injection using express-mongo-sanitize, centralized error handling, and protected frontend routes.
 
 17. FORM HANDLING AND VALIDATION STRATEGY
 
-The project uses Formik and Yup on the frontend for major forms such as login, registration, application creation, application editing, and review submission. This improves form state handling and gives immediate client side feedback.
-
-The backend independently validates requests using Joi. This dual validation approach improves both user experience and API safety. Even if a request bypasses the frontend, the backend still rejects invalid data.
+The project uses Formik and Yup on the frontend for major forms such as login, registration, application creation, application editing, and review submission. The backend independently validates requests using Joi. This dual validation approach improves both user experience and API safety.
 
 18. NOTIFICATION WORKFLOW
 
@@ -299,8 +405,6 @@ When an authenticated user downloads an application, a download record is create
 
 User notification on owner update
 When an owner announces an update for an application, the backend creates notifications for users who are subscribed to that application. Subscriptions are established through the download workflow because downloaded applications are added to the user's subscribedApps list.
-
-This design closely matches the capstone problem statement.
 
 19. USER WORKFLOW
 
@@ -319,7 +423,7 @@ The user later receives notifications when subscribed apps are updated.
 
 A typical owner flow proceeds as follows.
 
-The owner registers or logs in.
+The owner logs in.
 The owner accesses the dashboard.
 The owner creates a new application by submitting metadata such as name, description, version, category, genre, release date, and icon URL.
 The owner updates application details when required.
@@ -327,69 +431,89 @@ The owner hides or unhides applications to control public visibility.
 The owner tracks download counts and recent user comments in the dashboard.
 The owner announces updates, which generate notifications for subscribed users.
 The owner receives notifications when an application is downloaded.
+The owner opens User Management to promote or delete normal users.
 
-21. USER INTERFACE DESIGN CONSIDERATIONS
+21. OWNER USER MANAGEMENT ENHANCEMENT
 
-The frontend interface was refined to look more balanced and presentation ready. The design uses a modern Material UI theme, custom gradients, structured spacing, improved app card alignment, consistent buttons, responsive grids, and distinct layouts for public pages and owner pages.
+The current project includes an owner-only User Management page. This enhancement was added without changing the original two-role architecture.
 
-The branding was refined with a custom Play Store style logo. Application cards were standardized to maintain equal size, proper image fitting, readable labels, and better layout consistency across the Home page, Applications page, and owner dashboard.
+From this page, an owner can view registered accounts in a table, promote a user to owner, and delete a normal user account. Existing owner accounts cannot be promoted again and cannot be deleted from this panel. When a user is deleted, the system also removes that user's reviews, downloads, and personal notifications, then recalculates affected application counts.
 
-The UI was also adjusted for better readability on desktop, tablet, and mobile devices.
+22. DATASET AND SEED SNAPSHOT STRATEGY
 
-22. TESTING STRATEGY AND QUALITY ASSURANCE
+The current project no longer relies on the earlier static demo seed content. Instead, `database/seed.js` was regenerated from the live MongoDB database so that future runs of `npm run seed` restore the current working dataset.
+
+The present snapshot contains:
+
+- 7 categories
+- 5 users
+- 16 applications
+- 16 reviews
+- 17 downloads
+- 13 notifications
+
+All 16 applications in the current snapshot are public. The known root owner account in the snapshot is `hussaingaleti786@gmail.com` with role `owner`.
+
+23. USER INTERFACE DESIGN CONSIDERATIONS
+
+The frontend interface was refined to look balanced and presentation ready. The design uses Material UI, custom gradients, structured spacing, responsive grids, improved app card alignment, and a custom round Play Store logo. Public cards do not show redundant visibility labels because only public apps appear there, while owner dashboard cards still show visibility state for management clarity.
+
+The application also includes a shared footer across pages with the project support contact email for a cleaner final presentation.
+
+24. TESTING STRATEGY AND QUALITY ASSURANCE
 
 Testing was performed at multiple layers.
 
 API testing
-Jest and Supertest were used for backend integration tests. These tests verify authentication, app creation, review creation, download creation, and notification related flows. The API test setup can use an in memory MongoDB instance and has fallback support for a local test database when needed.
+Jest and Supertest are used for backend integration tests. These tests verify authentication, app creation, review creation, download creation, notification flow, and owner user management flows including promotion and deletion.
 
 Component and service testing
 React Testing Library and Jest are used to validate component rendering and service layer behavior in the frontend.
 
 End to end testing
-Playwright is used for smoke testing core browser flows such as loading the application and navigating to registration.
+Playwright is used for smoke testing core browser flows.
 
 Build verification
 The frontend production build is generated using react-scripts build to verify deployable output.
 
-23. PROJECT SETUP AND EXECUTION FLOW
+In the current workspace, the latest verified commands are npm run test:api and npm run build --workspace frontend.
 
-The project is executed through the following sequence.
+25. PROJECT SETUP AND EXECUTION FLOW
 
-Install dependencies using npm install.
+Setting up and running the project follows this sequence.
+
+Install dependencies using npm install from the root directory.
 Configure backend and frontend environment files.
 Start MongoDB locally.
 Seed the database using npm run seed.
 Run the full project using npm run dev.
 Open the frontend on localhost port 3000 and backend on localhost port 5000.
-Use the seeded demo credentials to verify both roles.
+Use the root owner account and seeded users to verify both roles.
 
-Supporting operational documents are included for execution, MongoDB setup, Postman verification, JWT flow, and GitHub upload workflow.
-
-24. CHALLENGES FACED AND RESOLUTIONS
+26. CHALLENGES FACED AND RESOLUTIONS
 
 Several practical challenges were encountered during the development cycle.
 
-One challenge was aligning the project strictly to the main capstone brief while also considering a secondary schema document whose naming was not fully identical to the problem statement. This was resolved by treating the main capstone brief as the primary source of truth and aligning the system to the required User and Owner roles.
+One challenge was aligning the project strictly to the capstone brief while keeping documentation synchronized with code updates. This was resolved by treating the main capstone brief as the primary source of truth and refreshing all supporting documentation together.
 
-A second challenge involved runtime validation issues caused by empty filter parameters and frontend request formatting. This was resolved by sanitizing request parameters and improving validation logic.
+A second challenge involved frontend layout consistency across public cards, owner dashboard panels, and mobile responsiveness. This was resolved through repeated UI refinement using Material UI and shared component updates.
 
-A third challenge involved UI inconsistency across cards, grids, and dashboard panels. This was addressed through repeated layout refinement and consistent theme based styling.
+A third challenge involved test stability on Windows when using mongodb-memory-server. This was resolved by using the local MongoDB fallback directly in the backend API tests on Windows for stable execution.
 
-A fourth challenge involved documentation drift as the project evolved. This was addressed by synchronizing README files, API guides, MongoDB notes, GitHub instructions, and the thesis report with the current codebase.
+A fourth challenge involved preserving the final working MongoDB dataset for future reseeding. This was resolved by exporting the live database snapshot into `database/seed.js` so that future seed runs restore the same working data.
 
-25. PROJECT OUTCOMES
+27. PROJECT OUTCOMES
 
 The final project delivers the following outcomes.
 
 A complete MERN Play Store system with clear role based functionality.
 A modular backend with service layer separation and secure API design.
 A React single page application with responsive user and owner experiences.
-A MongoDB schema that supports application publishing, reviews, downloads, and notifications.
-A seeded environment that allows evaluators to run and demonstrate the project quickly.
+A MongoDB schema that supports application publishing, reviews, downloads, notifications, and owner user management.
+A snapshot-based seed environment that allows evaluators to restore the current working dataset quickly.
 A documentation set that supports setup, testing, viva preparation, GitHub management, and thesis conversion.
 
-26. LIMITATIONS
+28. LIMITATIONS
 
 The project is intentionally scoped to capstone requirements and therefore has some limitations.
 
@@ -399,27 +523,13 @@ Deployment automation is not included.
 Advanced analytics and recommendation engines are not implemented.
 Search is application name driven rather than a full text search engine.
 
-These limitations do not affect the required capstone functionality but identify areas for future growth.
+29. FUTURE ENHANCEMENTS
 
-27. FUTURE ENHANCEMENTS
+Future improvements that can extend this project include image upload integration, pagination for large catalogues, advanced analytics on the owner dashboard, richer notification delivery channels, cloud deployment, and more advanced reporting for owner activity. The current two-role model can still be preserved while extending analytics and presentation quality.
 
-Future improvements that can extend this project include image upload integration, pagination for large catalogues, advanced analytics on the owner dashboard, richer notification delivery channels, role based admin support if ever required beyond the capstone brief, CI and CD pipelines, cloud deployment, and enhanced recommendation features based on user behavior.
+30. CONCLUSION
 
-28. CONCLUSION
+The Play Store Application demonstrates a complete and structured implementation of the capstone problem statement using the MERN stack. It supports two roles, secure authentication, application catalogue management, searching and filtering, review submission, download tracking, owner side administration, owner-only user management, notification workflows, responsive design, and multi level testing.
 
-The Play Store Application demonstrates a complete and structured implementation of the capstone problem statement using the MERN stack. It supports two roles, secure authentication, application catalogue management, searching and filtering, review submission, download tracking, owner side administration, notification workflows, responsive design, and multi level testing.
+The project was built with a strong focus on architecture, clarity, maintainability, and final presentation quality. As a result, it serves not only as a capstone submission but also as a professional full stack demonstration project suitable for academic evaluation, viva discussion, and portfolio presentation.
 
-The project was built with a strong focus on architecture, clarity, maintainability, and final presentation quality. As a result, it serves not only as a capstone submission but also as a professional full stack demonstration project. The final system is suitable for academic evaluation, viva discussion, and portfolio presentation.
-
-29. REFERENCES
-
-1. Great Learning Capstone Problem Statement, Play Store Application.
-2. MongoDB Documentation.
-3. Express.js Documentation.
-4. React Documentation.
-5. Material UI Documentation.
-6. Mongoose Documentation.
-7. JWT Documentation.
-8. Jest Documentation.
-9. Playwright Documentation.
-10. Project source code and documentation files included in this repository.

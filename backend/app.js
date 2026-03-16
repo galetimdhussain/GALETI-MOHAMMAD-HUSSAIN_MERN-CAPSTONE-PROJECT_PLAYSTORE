@@ -9,6 +9,7 @@ const appRoutes = require('./routes/appRoutes');
 const reviewRoutes = require('./routes/reviewRoutes');
 const downloadRoutes = require('./routes/downloadRoutes');
 const notificationRoutes = require('./routes/notificationRoutes');
+const userRoutes = require('./routes/userRoutes');
 const env = require('./config/env');
 const { errorHandler, notFound } = require('./middlewares/errorMiddleware');
 
@@ -39,6 +40,7 @@ app.get('/', (req, res) => {
       reviews: '/api/reviews',
       downloads: '/api/downloads',
       notifications: '/api/notifications',
+      users: '/api/users',
     },
   });
 });
@@ -64,6 +66,11 @@ app.get('/api', (req, res) => {
         'PATCH /api/apps/:id/visibility',
         'DELETE /api/apps/:id',
       ],
+      users: [
+        'GET /api/users',
+        'PUT /api/users/:id/role',
+        'DELETE /api/users/:id',
+      ],
     },
   });
 });
@@ -78,6 +85,7 @@ app.use('/api/apps', appRoutes);
 app.use('/api/reviews', reviewRoutes);
 app.use('/api/downloads', downloadRoutes);
 app.use('/api/notifications', notificationRoutes);
+app.use('/api/users', userRoutes);
 
 app.use(notFound);
 app.use(errorHandler);

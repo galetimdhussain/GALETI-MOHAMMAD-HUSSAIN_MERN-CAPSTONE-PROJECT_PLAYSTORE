@@ -1,139 +1,270 @@
-# Play Store MERN Architecture
+# Architecture
 
-## 1. Goal
+## 1. System Overview
 
-The project implements a full-stack Play Store system with two roles:
+The Play Store project is a full-stack MERN application with a React single page frontend and an Express REST API backend.
 
-- `user`: browse, search, filter, review, download, receive notifications, and access profile details
-- `owner`: create and manage apps, control visibility, review downloads and comments, receive download notifications, and announce updates
+The system supports only two roles:
 
-## 2. Current High-Level Flow
+- `user`
+- `owner`
 
-1. The React frontend loads and checks for a JWT token in local storage.
-2. If a token exists, the frontend calls `GET /api/auth/me` to restore the session.
-3. The frontend sends API requests through Axios.
-4. Formik manages frontend form state and Yup validates client-side input before submission.
-5. Express routes apply validation and authentication middleware.
-6. Controllers delegate logic to service modules.
-7. Services coordinate Mongoose models and business rules.
-8. MongoDB stores users, categories, applications, reviews, downloads, and notifications.
+Owners can manage applications and can also promote or delete normal users from the owner-only User Management page.
 
-## 3. Runtime Request Flow
+## 2. Runtime Layout
 
-### App search flow
+### Frontend
 
-1. User opens `App Listing` page.
-2. Frontend calls `GET /api/apps/search?search=whats&category=games&rating=4` when filters are applied.
-3. Backend validates query parameters.
-4. Controller forwards request to `applicationService.listApplications`.
-5. Service filters `applications` and populates related `category` and `owner` data.
-6. API returns matching application cards.
-7. React renders results without full page reload.
+Runs in the browser at:
 
-### Logout flow
+```text
+http://localhost:3000
+```
 
-1. Authenticated user clicks `Logout` in the navbar.
-2. Frontend calls `POST /api/auth/logout`.
-3. Frontend clears JWT from local storage.
-4. User is redirected to the home page.
+### Backend
 
-### Owner update notification flow
+Runs at:
 
-1. Owner opens dashboard and announces an app update.
-2. Frontend calls `POST /api/apps/:id/announce-update`.
-3. Backend updates app version and release date.
-4. Notification service creates notifications for subscribed users.
-5. Users see the announcement in `Notifications`.
+```text
+http://localhost:5000
+```
+
+### Database
+
+MongoDB stores the application data and is accessed through Mongoose.
+
+## 3. Frontend Architecture
+
+The frontend is organized under `frontend/src`.
+
+### components
+
+Reusable UI elements such as:
+
+- app cards
+- app filters
+- app form
+- review form and review list
+- notification list
+- page hero
+- loading and empty states
+- app shell
+
+### pages
+
+Current route-level pages:
+
+- `Home`
+- `AppListing`
+- `AppDetails`
+- `Login`
+- `Register`
+- `UserProfile`
+- `Notifications`
+- `OwnerDashboard`
+- `UserManagement`
+- `AddApp`
+- `EditApp`
+
+### services
+
+Axios-based API wrappers:
+
+- `authService`
+- `appService`
+- `categoryService`
+- `reviewService`
+- `downloadService`
+- `notificationService`
+- `userService`
+
+### contexts and hooks
+
+- `AuthContext` manages token, profile, login, logout, and register behavior
+- `useAuth` provides access to auth state
+
+### routes
+
+- `AppRoutes` defines all pages
+- `ProtectedRoute` enforces authentication and role checks
+
+### styles
+
+- global CSS
+- MUI theme configuration
 
 ## 4. Backend Architecture
 
-### Main folders
+The backend is organized under `backend/`.
 
-- `config/`: environment and database setup
-- `models/`: Mongoose schemas
-- `controllers/`: HTTP request/response layer
-- `routes/`: route definitions
-- `services/`: business logic
-- `middlewares/`: auth, role, validation, and errors
-- `validators/`: Joi schemas
-- `utils/`: JWT helpers, serializers, constants, error helpers
-- `tests/`: API integration tests
+### config
 
-### Important backend modules
+- database connection
+- environment loading
 
-- `authService`: register, login, logout, current profile
-- `applicationService`: listing, search, details, CRUD, visibility, dashboard, announcements
-- `reviewService`: create, list, delete reviews
-- `downloadService`: create downloads and owner download listing
-- `notificationService`: create and read notifications
-- `categoryService`: upserts default categories and returns active categories
+### models
 
-### Runtime improvements added
+- `User`
+- `Category`
+- `Application`
+- `Review`
+- `Download`
+- `Notification`
 
-- `/` returns backend status information
-- `/api` returns API root information
-- `/api/health` returns health confirmation
-- MongoDB connection logs are printed on startup
-- backend API tests fall back to a local test database if the in-memory server cannot start
+### controllers
 
-## 5. Frontend Architecture
+Thin request handlers for each route group.
 
-### Main folders
+### services
 
-- `components/`: cards, forms, layout shell, review list, notifications UI
-- `pages/`: route pages
-- `services/`: Axios-based API modules
-- `contexts/`: auth session state
-- `hooks/`: `useAuth`
-- `routes/`: route map and protected route wrapper
-- `styles/`: theme and global styles
-- `utils/`: token storage and formatting helpers
+Business logic lives here:
 
-### Current page flow
+- auth
+- categories
+- applications
+- reviews
+- downloads
+- notifications
+- users
 
-- `Home`: featured apps and public app discovery
-- `AppListing`: search, category filter, rating filter
-- `AppDetails`: app metadata, reviews, download action, owner update notice
-- `Login` and `Register`: authentication flow with Formik + Yup validation
-- `UserProfile`: profile details and quick navigation
-- `Notifications`: user or owner notifications
-- `OwnerDashboard`: metrics, app management, reviews, downloads, announcements
-- `AddApp` and `EditApp`: owner app forms using Formik + Yup validation
+### middlewares
 
-## 6. Database Relationships
+- authentication
+- authorization
+- validation
+- error handling
 
-- one owner uploads many applications
-- one user writes many reviews
-- one application receives many reviews
-- one application receives many downloads
-- one user receives many notifications
-- one user subscribes to many apps for update notifications
+### validators
 
-## 7. Security Design
+Joi schemas for request validation.
 
-- JWT authentication
-- hashed passwords with `bcryptjs`
-- route protection using `authenticate`
-- role checks using `authorizeRoles`
-- request validation using Joi
-- centralized error handling middleware
-- frontend protected routes for profile, notifications, and owner pages
-- frontend client-side validation using Formik + Yup
+### tests
 
-## 8. Testing Design
+Backend integration tests for the current API flows.
 
-- backend API tests with Jest and Supertest
-- frontend component and service tests with Jest and React Testing Library
-- frontend browser smoke tests with Playwright
-- frontend CRA production build verification
+## 5. Data Model
 
-## 9. Submission-Ready Notes
+### users
 
-This project currently runs with:
+Stores:
 
-- backend development server via `nodemon`
-- frontend development server via `react-scripts start`
-- MongoDB local instance
-- 4 seeded accounts
-- 12 seeded applications
-- passing seed, API, component, service, E2E, and build verification
+- name
+- email
+- hashed password
+- role
+- subscribedApps
+
+Valid roles:
+
+- `user`
+- `owner`
+
+### categories
+
+Stores category names and slugs for filtering.
+
+### applications
+
+Stores:
+
+- metadata
+- owner reference
+- category reference
+- visibility
+- rating summary
+- download count
+- last announcement text
+
+### reviews
+
+Stores user reviews for applications.
+
+### downloads
+
+Stores download events and subscription linkage.
+
+### notifications
+
+Stores owner download notifications and user update notifications.
+
+## 6. Main Runtime Flow
+
+1. The frontend loads and reads any stored token.
+2. The frontend requests `/api/auth/me` to restore the current session.
+3. Public pages load app and category data from the backend.
+4. Authenticated users can review, download, and receive notifications.
+5. Authenticated owners can manage apps and send update announcements.
+6. Owners can open User Management to promote a user to owner or delete a normal user account.
+7. Role-based checks are enforced by backend middleware using the current database role.
+
+## 7. Owner User Management Flow
+
+### Promotion flow
+
+1. An owner opens `/owner/users`.
+2. The frontend loads all users from `GET /api/users`.
+3. The owner clicks `Promote to Owner` for a current user.
+4. The frontend calls `PUT /api/users/:id/role` with `role: owner`.
+5. MongoDB updates that user's role.
+6. Future protected backend checks treat that account as owner.
+7. Frontend profile refresh on focus or reload picks up the updated role visually.
+
+### Delete flow
+
+1. An owner opens `/owner/users`.
+2. The owner clicks `Delete User` for a current user.
+3. The frontend confirms the action and calls `DELETE /api/users/:id`.
+4. The backend deletes the user account.
+5. The backend also removes that user's reviews, downloads, and personal notifications.
+6. Affected application review and download counts are recalculated.
+7. Owner accounts are blocked from deletion through this panel.
+
+## 8. Authentication and Authorization
+
+### Authentication
+
+- JWT token returned at login or registration
+- token stored in local storage
+- token attached through Axios request interceptor
+
+### Authorization
+
+- protected backend routes load the user from MongoDB
+- owner-only routes verify `req.user.role === 'owner'`
+- protected frontend routes use `ProtectedRoute`
+
+## 9. Current Seed Strategy
+
+The current `database/seed.js` is not the earlier manual demo seed. It is a snapshot of the current live MongoDB dataset and restores that exact structure, document ids, and relationships when `npm run seed` is run.
+
+Current snapshot totals:
+
+- 7 categories
+- 5 users
+- 16 applications
+- 16 reviews
+- 17 downloads
+- 13 notifications
+
+## 10. Testing Architecture
+
+### Backend API tests
+
+- Jest
+- Supertest
+- local MongoDB fallback on Windows for stability
+- `mongodb-memory-server` may be used in other environments when available
+
+### Frontend tests
+
+- React Testing Library
+- Jest
+- Playwright smoke tests
+
+### Build verification
+
+- CRA production build through `react-scripts build`
+
+## 11. Current Design Direction
+
+The UI uses Material UI with custom gradients, responsive grids, polished app cards, owner dashboard panels, a custom round Play Store logo, and a shared global footer. Public cards avoid redundant visibility chips, while owner dashboard cards keep visibility state visible for management tasks.

@@ -17,16 +17,24 @@ let mongoServer;
 let usingMemoryServer = false;
 
 beforeAll(async () => {
-  try {
-    mongoServer = await MongoMemoryServer.create({
-      instance: {
-        startupTimeout: 30000,
-      },
-    });
-    usingMemoryServer = true;
-    await connectDb(mongoServer.getUri());
-  } catch (error) {
-    usingMemoryServer = false;
+  const shouldAttemptMemoryServer = process.platform !== 'win32' && process.env.USE_MONGOMS !== 'false';
+
+  if (shouldAttemptMemoryServer) {
+    try {
+      mongoServer = await MongoMemoryServer.create({
+        instance: {
+          startupTimeout: 30000,
+        },
+      });
+      usingMemoryServer = true;
+      await connectDb(mongoServer.getUri());
+    } catch (error) {
+      usingMemoryServer = false;
+      mongoServer = null;
+    }
+  }
+
+  if (!usingMemoryServer) {
     await connectDb(process.env.TEST_MONGODB_URI || 'mongodb://127.0.0.1:27017/playstore_capstone_test');
   }
 
@@ -191,5 +199,98 @@ describe('Play Store API flow', () => {
 
     expect(userNotifications.statusCode).toBe(200);
     expect(userNotifications.body.data[0].type).toBe('app_updated');
+  });
+
+  it('lets owners list users and promote users to owner without changing existing owners', async () => {
+    const ownerRegister = await request(app).post('/api/auth/register').send({
+      name: 'Owner Three',
+      email: 'owner3@example.com',
+      password: 'Password123',
+      role: 'owner',
+    });
+    const ownerToken = ownerRegister.body.data.token;
+
+    const userRegister = await request(app).post('/api/auth/register').send({
+      name: 'User Three',
+      email: 'user3@example.com',
+      password: 'Password123',
+      role: 'user',
+    });
+    const userToken = userRegister.body.data.token;
+    const userId = userRegister.body.data.user.id;
+
+    const listUsersResponse = await request(app)
+      .get('/api/users')
+      .set('Authorization', `Bearer ${ownerToken}`);
+
+    expect(listUsersResponse.statusCode).toBe(200);
+    expect(listUsersResponse.body.data).toHaveLength(2);
+
+    const promoteResponse = await request(app)
+      .put(`/api/users/${userId}/role`)
+      .set('Authorization', `Bearer ${ownerToken}`)
+      .send({ role: 'owner' });
+
+    expect(promoteResponse.statusCode).toBe(200);
+    expect(promoteResponse.body.data.role).toBe('owner');
+
+    const reloginResponse = await request(app).post('/api/auth/login').send({
+      email: 'user3@example.com',
+      password: 'Password123',
+    });
+
+    expect(reloginResponse.statusCode).toBe(200);
+    expect(reloginResponse.body.data.user.role).toBe('owner');
+
+    const promotedAccessResponse = await request(app)
+      .get('/api/apps/owner/dashboard/summary')
+      .set('Authorization', `Bearer ${userToken}`);
+
+    expect(promotedAccessResponse.statusCode).toBe(200);
+
+    const ownerChangeResponse = await request(app)
+      .put(`/api/users/${ownerRegister.body.data.user.id}/role`)
+      .set('Authorization', `Bearer ${ownerToken}`)
+      .send({ role: 'owner' });
+
+    expect(ownerChangeResponse.statusCode).toBe(400);
+  });
+
+  it('lets owners delete normal users while protecting owner accounts', async () => {
+    const ownerRegister = await request(app).post('/api/auth/register').send({
+      name: 'Owner Four',
+      email: 'owner4@example.com',
+      password: 'Password123',
+      role: 'owner',
+    });
+    const ownerToken = ownerRegister.body.data.token;
+
+    const userRegister = await request(app).post('/api/auth/register').send({
+      name: 'User Four',
+      email: 'user4@example.com',
+      password: 'Password123',
+      role: 'user',
+    });
+    const userId = userRegister.body.data.user.id;
+
+    const deleteUserResponse = await request(app)
+      .delete(`/api/users/${userId}`)
+      .set('Authorization', `Bearer ${ownerToken}`);
+
+    expect(deleteUserResponse.statusCode).toBe(200);
+
+    const listUsersResponse = await request(app)
+      .get('/api/users')
+      .set('Authorization', `Bearer ${ownerToken}`);
+
+    expect(listUsersResponse.statusCode).toBe(200);
+    expect(listUsersResponse.body.data).toHaveLength(1);
+    expect(listUsersResponse.body.data[0].email).toBe('owner4@example.com');
+
+    const deleteOwnerResponse = await request(app)
+      .delete(`/api/users/${ownerRegister.body.data.user.id}`)
+      .set('Authorization', `Bearer ${ownerToken}`);
+
+    expect(deleteOwnerResponse.statusCode).toBe(400);
   });
 });

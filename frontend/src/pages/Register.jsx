@@ -1,6 +1,6 @@
 import { useFormik } from 'formik';
 import * as Yup from 'yup';
-import { Alert, Box, Button, Card, CardContent, MenuItem, Stack, TextField, Typography } from '@mui/material';
+import { Alert, Box, Button, Card, CardContent, Stack, TextField, Typography } from '@mui/material';
 import { useNavigate } from 'react-router-dom';
 import useAuth from '../hooks/useAuth';
 import PageHero from '../components/common/PageHero';
@@ -12,7 +12,7 @@ const registerSchema = Yup.object({
     .min(8, 'Password must be at least 8 characters.')
     .matches(/(?=.*[a-z])(?=.*[A-Z])(?=.*\d)/, 'Include uppercase, lowercase, and a number.')
     .required('Password is required.'),
-  role: Yup.string().oneOf(['user', 'owner']).required('Role is required.'),
+  role: Yup.string().oneOf(['user']).required('Role is required.'),
 });
 
 function Register() {
@@ -31,8 +31,8 @@ function Register() {
       setStatus('');
 
       try {
-        const user = await register(values);
-        navigate(user.role === 'owner' ? '/owner' : '/apps');
+        await register({ ...values, role: 'user' });
+        navigate('/apps');
       } catch (submissionError) {
         setStatus(submissionError?.response?.data?.message || 'Registration failed.');
       } finally {
@@ -46,8 +46,8 @@ function Register() {
       <Box sx={{ width: '100%', maxWidth: 920 }}>
         <PageHero
           eyebrow="Account Registration"
-          title="Create a user or owner account with clear validation and secure access."
-          description="Choose the right role, enter a valid email address, and use a strong password to start using the platform immediately."
+          title="Create a user account with clear validation and secure access."
+          description="Enter a valid email address and a strong password to start exploring the platform immediately with a standard user account."
         />
       </Box>
       <Card sx={{ maxWidth: 620, mx: 'auto', width: '100%', borderRadius: 2 }}>
@@ -88,18 +88,12 @@ function Register() {
               required
             />
             <TextField
-              select
               label="Role"
               name="role"
-              value={formik.values.role}
-              onChange={formik.handleChange}
-              onBlur={formik.handleBlur}
-              error={Boolean(formik.touched.role && formik.errors.role)}
-              helperText={(formik.touched.role && formik.errors.role) || 'Choose the type of account you want to create.'}
-            >
-              <MenuItem value="user">User</MenuItem>
-              <MenuItem value="owner">Owner</MenuItem>
-            </TextField>
+              value="User"
+              disabled
+              helperText="Registration is locked to the user role for this submission build."
+            />
             <Button type="submit" variant="contained" color="primary" disabled={formik.isSubmitting}>
               Create Account
             </Button>
