@@ -1,0 +1,22 @@
+.route-wrapper {
+  position: relative;
+}
+
+.route-page {
+  width: 100%;
+}
+
+.route-animate {
+  animation: routeFadeIn 260ms ease;
+}
+
+@keyframes routeFadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(8px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}

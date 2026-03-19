@@ -1,0 +1,88 @@
+{
+  "packages": [
+    {
+      "id": "1",
+      "title": "Goa Beach Escape",
+      "location": "Goa, India",
+      "duration": "4 Days / 3 Nights",
+      "price": 14999,
+      "rating": 4.4,
+      "description": "Relax at sunny beaches with water sports and local cuisine."
+    },
+    {
+      "id": "2",
+      "title": "Kerala Backwaters Retreat",
+      "location": "Alleppey, India",
+      "duration": "5 Days / 4 Nights",
+      "price": 18999,
+      "rating": 4.7,
+      "description": "Cruise through scenic backwaters and enjoy traditional stays."
+    },
+    {
+      "id": "3",
+      "title": "Manali Adventure Trail",
+      "location": "Manali, India",
+      "duration": "6 Days / 5 Nights",
+      "price": 21999,
+      "rating": 4.5,
+      "description": "Mountain trekking, paragliding, and snow viewpoints."
+    },
+    {
+      "id": "4",
+      "title": "Jaipur Heritage Tour",
+      "location": "Jaipur, India",
+      "duration": "3 Days / 2 Nights",
+      "price": 11999,
+      "rating": 4.3,
+      "description": "Explore forts, palaces, and vibrant local markets."
+    },
+    {
+      "id": "5",
+      "title": "Andaman Island Discovery",
+      "location": "Port Blair, India",
+      "duration": "5 Days / 4 Nights",
+      "price": 27999,
+      "rating": 4.8,
+      "description": "Crystal waters, coral reefs, and island sightseeing."
+    },
+    {
+      "id": "6",
+      "title": "Sikkim Nature Bliss",
+      "location": "Gangtok, India",
+      "duration": "5 Days / 4 Nights",
+      "price": 23999,
+      "rating": 4.6,
+      "description": "Experience monasteries, valleys, and mountain landscapes."
+    }
+  ],
+  "bookings": [
+    {
+      "id": "cb12",
+      "fullName": "GALETI MOHAMMAD HUSSAIN",
+      "email": "hussaingaleti786@gmail.com",
+      "phone": "8688729737",
+      "travelDate": "2026-02-26",
+      "travelers": 2,
+      "specialRequests": "",
+      "packageId": "1",
+      "packageTitle": "Goa Beach Escape",
+      "packagePrice": 14999,
+      "bookedOn": "2026-02-25T13:52:56.234Z",
+      "bookingStatus": "Confirmed"
+    },
+    {
+      "id": "71f8",
+      "fullName": "Mohammad Hussain",
+      "email": "hussaingaleti786@gmail.com",
+      "phone": "8688729737",
+      "travelDate": "2026-02-26",
+      "travelers": 2,
+      "specialRequests": "thank you",
+      "packageId": "6",
+      "packageTitle": "Sikkim Nature Bliss",
+      "packagePrice": 23999,
+      "bookedOn": "2026-02-25T14:05:05.189Z",
+      "bookingStatus": "Confirmed"
+    }
+  ]
+}

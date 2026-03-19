@@ -1,0 +1,45 @@
+.App {
+  text-align: center;
+  padding: 30px;
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+.grid-container {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 15px;
+  margin-top: 20px;
+}
+
+.list-container {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  margin-top: 20px;
+}
+
+.book-card-grid {
+  border: 1px solid #0a0909;
+  padding: 15px;
+  border-radius: 8px;
+  background-color: #7c9dda;
+}
+
+.book-card-list {
+  border: 1px solid #aaa;
+  padding: 15px;
+  border-radius: 8px;
+  background-color: #7c9dda;
+  text-align: left;
+}
+
+button {
+  margin: 5px;
+  padding: 8px 12px;
+  cursor: pointer;
+}
+
+input {
+  padding: 8px;
+  width: 220px;
+}
